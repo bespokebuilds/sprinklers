@@ -22,7 +22,7 @@ Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit per
 
 ## Quick start
 
-Sit sheeure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+This is a test of the staging branch and the domain associated with it.
 
 ### Installing dependencies
 
