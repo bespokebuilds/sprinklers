@@ -2,47 +2,54 @@ export const navigation = [
   {
     title: 'Introduction',
     links: [
-      { title: 'Getting started', href: '/' },
-      { title: 'Contributing', href: '/docs/installation' },
+      { title: 'Overview', href: '/' },
+      { title: 'Perspectives', href: '/docs/perspectives' },
+      { title: 'Communication', href: '/docs/communication' },
     ],
   },
   {
-    title: 'Standard Operating Procedures',
+    title: 'Fire Prevention Basics',
     links: [
-      { title: 'Project Turnovers', href: '/docs/understanding-caching' },
+      { title: 'Fire Dynamics', href: '/docs/fire-dynamics' },
       {
-        title: 'Estimations',
-        href: '/docs/predicting-user-behavior',
+        title: 'Suppression and Prevention',
+        href: '/docs/suppression-and-prevention',
       },
-      { title: 'Basics of time-travel', href: '/docs/basics-of-time-travel' },
-      {
-        title: 'Introduction to string theory',
-        href: '/docs/introduction-to-string-theory',
-      },
-      { title: 'The butterfly effect', href: '/docs/the-butterfly-effect' },
+      { title: 'History', href: '/docs/history' },
     ],
   },
   {
-    title: 'Design',
+    title: 'Standards and Procedures',
     links: [
-      { title: 'Systems', href: '/docs/writing-plugins' },
-      { title: 'Calculations', href: '/docs/neuralink-integration' },
-      { title: 'Product Data', href: '/docs/temporal-paradoxes' },
-      { title: 'Requests For Information', href: '/docs/testing' },
-      { title: 'Compile-time caching', href: '/docs/compile-time-caching' },
+      { title: 'Interdepartmental', href: '/docs/interdepartmental' },
       {
-        title: 'Predictive data generation',
-        href: '/docs/predictive-data-generation',
+        title: 'Design',
+        href: '/docs/design',
       },
+      { title: 'Fabrication', href: '/docs/fabrication' },
+      { title: 'Installation', href: '/docs/installation' },
+
     ],
   },
   {
-    title: 'Stages of Design',
+    title: 'Systems Layout',
     links: [
-      { title: 'predict', href: '/docs/predict' },
-      { title: 'flush', href: '/docs/flush' },
-      { title: 'revert', href: '/docs/revert' },
-      { title: 'regret', href: '/docs/regret' },
+      { title: 'General Considerations', href: '/docs/general-considerations' },
+      { title: 'Seismic Bracing', href: '/docs/seismic-bracing' },
+      { title: 'Occupancy and Hazard', href: '/docs/occupancy-and-hazard' },
+      { title: 'Obstructions', href: '/docs/obstructions' },
+      { title: 'System Specifics', href: '/docs/system-specifics' },
+      { title: 'Special Situations', href: '/docs/special-situations' },
+    ],
+  },
+  {
+    title: 'Hydraulics',
+    links: [
+      { title: 'Hydraulic Calculations', href: '/docs/hydraulic-calculations' },
+      { title: 'Underground', href: '/docs/underground' },
+      { title: 'Pumps', href: '/docs/pumps' },
+      { title: 'Standpipes', href: '/docs/standpipes' },
+      { title: 'Water Tanks', href: '/docs/water-tanks' },
     ],
   },
   {
