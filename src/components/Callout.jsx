@@ -5,21 +5,21 @@ import { Icon } from '@/components/Icon'
 const styles = {
   note: {
     container:
-      'bg-sky-50 dark:bg-slate-800/60 dark:ring-1 dark:ring-slate-300/10',
-    title: 'text-sky-900 dark:text-sky-400',
-    body: 'text-sky-800 [--tw-prose-background:theme(colors.sky.50)] prose-a:text-sky-900 prose-code:text-sky-900 dark:text-slate-300 dark:prose-code:text-slate-300',
+      'bg-amber-100/60 dark:bg-amber-800/10 dark:ring-1 dark:ring-red-300/10',
+    title: 'text-amber-900 dark:text-amber-400',
+    body: 'text-amber-800 [--tw-prose-background:theme(colors.amber.50)] prose-a:text-amber-900 prose-code:text-amber-900 dark:text-white/80 dark:prose-code:text-slate-300',
   },
   warning: {
     container:
-      'bg-amber-50 dark:bg-slate-800/60 dark:ring-1 dark:ring-slate-300/10',
-    title: 'text-amber-900 dark:text-amber-500',
-    body: 'text-amber-800 [--tw-prose-underline:theme(colors.amber.400)] [--tw-prose-background:theme(colors.amber.50)] prose-a:text-amber-900 prose-code:text-amber-900 dark:text-slate-300 dark:[--tw-prose-underline:theme(colors.sky.700)] dark:prose-code:text-slate-300',
+      'bg-red-50 dark:bg-red-800/10 dark:ring-1 dark:ring-red-300/10',
+    title: 'text-red-900 dark:text-red-500',
+    body: 'text-red-800 [--tw-prose-underline:theme(colors.red.400)] [--tw-prose-background:theme(colors.red.50)] prose-a:text-red-900 prose-code:text-red-900 dark:text-white/80 dark:[--tw-prose-underline:theme(colors.red.700)] dark:prose-code:text-slate-300',
   },
 }
 
 const icons = {
-  note: (props) => <Icon icon="lightbulb" {...props} />,
-  warning: (props) => <Icon icon="warning" color="amber" {...props} />,
+  note: (props) => <Icon icon="lightbulb" color="amber" {...props} />,
+  warning: (props) => <Icon icon="warning" color="red" {...props} />,
 }
 
 export function Callout({ title, children, type = 'note' }) {
