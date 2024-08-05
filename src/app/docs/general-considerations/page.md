@@ -31,7 +31,7 @@ Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut par
 
 ---
 
-## Dry Systems
+## Spacing
 
 In colder climates, unheated locations such as parking garages and warehouses pose a risk to wet systems which can freeze and cause pipes to burst. This is a perfect application for dry systems.
 
