@@ -22,7 +22,7 @@ Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit per
 
 ## Quick start
 
-This is a test of the staging branch and the domain associated with it.
+This is a test of the analytics.
 
 ### Installing dependencies
 
