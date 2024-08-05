@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
+import { Analytics } from "@vercel/analytics/react"
 import '@/styles/tailwind.css'
 
 const inter = Inter({
@@ -36,10 +37,11 @@ export default function RootLayout({ children }) {
       className={clsx('h-full antialiased', inter.variable, lexend.variable)}
       suppressHydrationWarning
     >
-      <body className="flex min-h-full bg-white dark:bg-slate-900">
+      <body className="flex min-h-full bg-white dark:bg-red-950/25">
         <Providers>
           <Layout>{children}</Layout>
         </Providers>
+        <Analytics />
       </body>
     </html>
   )

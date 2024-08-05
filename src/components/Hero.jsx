@@ -19,7 +19,7 @@ const code = `export default {
 
 const tabs = [
   { name: 'cache-advance.config.js', isActive: true },
-  { name: 'package.json', isActive: false },
+  // { name: 'package.json', isActive: false },
 ]
 
 function TrafficLightsIcon(props) {
@@ -34,7 +34,7 @@ function TrafficLightsIcon(props) {
 
 export function Hero() {
   return (
-    <div className="overflow-hidden bg-slate-900 dark:-mb-32 dark:mt-[-4.75rem] dark:pb-32 dark:pt-[4.75rem]">
+    <div className="overflow-hidden bg-red-950 dark:bg-opacity-5 dark:-mb-32 dark:mt-[-4.75rem] dark:pb-32 dark:pt-[4.75rem]">
       <div className="py-16 sm:px-2 lg:relative lg:px-0 lg:py-20">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 lg:max-w-8xl lg:grid-cols-2 lg:px-8 xl:gap-x-16 xl:px-12">
           <div className="relative z-10 md:text-center lg:text-left">
@@ -51,7 +51,7 @@ export function Hero() {
               <p className="inline bg-gradient-to-r from-orange-200 via-red-400 to-orange-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
                 Answer the hot questions.
               </p>
-              <p className="mt-3 text-2xl tracking-tight text-slate-400">
+              <p className="mt-3 text-2xl tracking-tight text-orange-400">
                 Standard Operating Procedures and knowledge, honed by experts and in 
                 line with industry best practices.
               </p>
@@ -86,11 +86,11 @@ export function Hero() {
                 unoptimized
                 priority
               />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10 blur-lg" />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10" />
-              <div className="relative rounded-2xl bg-[#0A101F]/80 ring-1 ring-white/10 backdrop-blur">
-                <div className="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-sky-300/0 via-sky-300/70 to-sky-300/0" />
-                <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-orange-300 via-orange-300/70 to-red-300 opacity-10 blur-lg" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-orange-300 via-orange-300/70 to-red-300 opacity-10" />
+              <div className="relative rounded-2xl bg-orange-800/50 ring-1 ring-white/10 backdrop-blur">
+                <div className="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-orange-300/0 via-orange-300/70 to-orange-300/0" />
+                <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-red-400/0 via-red-400 to-red-400/0" />
                 <div className="pl-4 pt-4">
                   <TrafficLightsIcon className="h-2.5 w-auto stroke-slate-500/30" />
                   <div className="mt-4 flex space-x-2 text-xs">
@@ -100,14 +100,14 @@ export function Hero() {
                         className={clsx(
                           'flex h-6 rounded-full',
                           tab.isActive
-                            ? 'bg-gradient-to-r from-sky-400/30 via-sky-400 to-sky-400/30 p-px font-medium text-sky-300'
+                            ? 'bg-gradient-to-r from-orange-400/30 via-orange-400 to-orange-400/30 p-px font-medium text-orange-300'
                             : 'text-slate-500',
                         )}
                       >
                         <div
                           className={clsx(
                             'flex items-center rounded-full px-2.5',
-                            tab.isActive && 'bg-slate-800',
+                            tab.isActive && 'bg-red-950',
                           )}
                         >
                           {tab.name}
@@ -148,7 +148,7 @@ export function Hero() {
                           )}
                           style={style}
                         >
-                          <code className="px-4">
+                          {/* <code className="px-4">
                             {tokens.map((line, lineIndex) => (
                               <div key={lineIndex} {...getLineProps({ line })}>
                                 {line.map((token, tokenIndex) => (
@@ -159,7 +159,7 @@ export function Hero() {
                                 ))}
                               </div>
                             ))}
-                          </code>
+                          </code> */}
                         </pre>
                       )}
                     </Highlight>

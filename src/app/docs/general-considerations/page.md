@@ -10,7 +10,7 @@ There are a number of different systems that those in fire protection systems de
 
 ---
 
-## Wet Systems
+## System Constraints
 
 The most common system in warm and climates and temperature regulated spaces is the Wet piped system. It consisted of pipes that are filled with water that is readily available for immediate use.
 
@@ -31,7 +31,7 @@ Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut par
 
 ---
 
-## Dry Systems
+## Spacing
 
 In colder climates, unheated locations such as parking garages and warehouses pose a risk to wet systems which can freeze and cause pipes to burst. This is a perfect application for dry systems.
 
