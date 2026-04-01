@@ -1,9 +1,53 @@
 ---
-title: History
+title: History of Fire Protection
 nextjs:
   metadata:
-    title: History
-    description: An in-depth history of fire protection.
+    title: History of Fire Protection
+    description: The history of fire protection from ancient civilizations through the invention of automatic sprinklers to modern fire safety technology.
+
+---
+
+## History of Automatic Sprinklers
+
+While the broader history of fire protection spans millennia, the automatic fire sprinkler — the technology at the heart of this knowledge base — has its own remarkable story.
+
+### The origins (1806-1874)
+
+The concept of automatic fire suppression emerged in the early 19th century. In 1806, John Carey patented a system using a string-and-counterweight mechanism to release water when fire burned through the string. However, these early systems were crude and unreliable.
+
+The first practical automatic sprinkler system is credited to **Henry S. Parmelee** of New Haven, Connecticut, who patented his design in **1874**. Parmelee was a piano manufacturer who wanted to protect his factory. His sprinkler used a soldered joint that melted at a specific temperature, releasing water from a perforated head. He installed the first system in his own factory — and his insurance premiums dropped significantly.
+
+{% figure src="/placeholder-diagram.svg" alt="Early Parmelee sprinkler head design" caption="Henry Parmelee's 1874 automatic sprinkler head — the first commercially practical design, invented to protect his piano factory" /%}
+
+### Frederick Grinnell and the modern sprinkler (1881-1900)
+
+**Frederick Grinnell** improved on Parmelee's design throughout the 1880s. His 1881 patent introduced a more sensitive and reliable sprinkler head with a glass disc seal. By 1890, Grinnell had developed the sprinkler head design that became the basis for modern sprinklers — a deflector that distributed water in an umbrella pattern over a defined area.
+
+Grinnell's improvements made sprinklers practical for widespread commercial and industrial use. His company, the Grinnell Company, became one of the largest fire sprinkler manufacturers in the world and continues to this day as part of Johnson Controls.
+
+### The founding of NFPA (1896)
+
+The growth of automatic sprinklers created a need for standardized installation practices. In **1896**, the **National Fire Protection Association (NFPA)** was founded, largely in response to inconsistencies in sprinkler system installation. The first NFPA sprinkler installation standard — the ancestor of today's NFPA 13 — was among the organization's earliest publications.
+
+NFPA's founding brought together insurance companies, sprinkler manufacturers, and fire protection engineers to establish uniform rules. This standardization was critical for the insurance industry, which needed reliable criteria for evaluating the effectiveness of sprinkler systems and setting premium reductions.
+
+### Key milestones in sprinkler development
+
+- **1874** — Parmelee patents the first practical automatic sprinkler
+- **1881** — Grinnell patents improved sprinkler head design
+- **1896** — NFPA founded; first sprinkler installation standard published
+- **1940s** — Development of the spray-type sprinkler head (the modern standard spray pattern)
+- **1953** — Introduction of the pendent sprinkler head for concealed installations
+- **1970s** — Quick Response (QR) technology developed, dramatically improving residential fire survivability
+- **1988** — ESFR (Early Suppression Fast Response) sprinklers introduced for high-piled storage
+- **1990s-2000s** — Residential sprinkler mandates gain momentum in building codes
+- **2011** — IRC (International Residential Code) includes residential sprinkler requirement (widely amended out by states)
+
+{% figure src="/placeholder-diagram.svg" alt="Sprinkler technology timeline" caption="Timeline of major milestones in automatic sprinkler development from 1874 to present" /%}
+
+{% callout type="note" title="The proven track record" %}
+According to NFPA data, automatic sprinklers have been in use for over 150 years. In buildings with sprinklers, the fire death rate is reduced by roughly 87% compared to buildings without them. There is no single fire safety technology with a longer or more proven track record.
+{% /callout %}
 
 ---
 

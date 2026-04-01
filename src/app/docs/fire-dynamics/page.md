@@ -3,7 +3,7 @@ title: Fire Dynamics
 nextjs:
   metadata:
     title: Fire Dynamics
-    description: Fire protection basics.
+    description: Understanding fire dynamics for fire protection design — combustion, fire development stages, flashover, and suppression principles.
 ---
 
 Understanding fire dynamics is crucial for effective fire protection design. It involves studying how fires start, develop, and behave under various conditions. This knowledge helps designers create safer buildings and environments by implementing strategies to prevent, control, and extinguish fires. Fire dynamics is a multidisciplinary field that combines principles from chemistry, physics, and engineering to analyze fire behavior comprehensively.
@@ -16,9 +16,7 @@ Understanding fire dynamics is crucial for effective fire protection design. It 
 
 Fires start through a chemical reaction known as combustion, which requires three elements: heat, fuel, and oxygen. This is often referred to as the fire triangle. When these elements are present in the right proportions, they can initiate a fire.
 
-![NASA Combustion Diagram](https://www.grc.nasa.gov/www/k-12/airplane/Images/combst1.gif)
-
-> Image source: [NASA](https://www.grc.nasa.gov/www/k-12/airplane/Images/combst1.gif)
+{% figure src="/placeholder-diagram.svg" alt="Fire triangle and combustion process" caption="The fire triangle — heat, fuel, and oxygen must be present in the right proportions to sustain combustion" /%}
 
 ### Common Ignition Sources
 

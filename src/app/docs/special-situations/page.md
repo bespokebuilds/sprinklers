@@ -1,185 +1,168 @@
 ---
-title: Special Situations
+title: Special Occupancies
 nextjs:
   metadata:
-    title: Special Situations
-    description: Special situations for consideration in the layout of sprinkler heads.
+    title: Special Occupancies
+    description: Sprinkler design for special occupancies — high-piled storage, attics, cold storage, parking structures, high-rises, and residential systems.
 ---
 
-Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
-
----
-
-## Stairways
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
-
-### Stairways with Combustible Construction
-
-Sprinklers are Required:
-
-**Beneath All Stairways:** This is to ensure that fire starting under the stairs can be effectively controlled.
-
-**At the Top of Combustible Stair Shafts:** To protect against fires spreading through the stair shaft to upper levels.
-
-**Under Landings at Each Floor Level:** Protection is required under every landing, as these are potential areas where fires can accumulate and spread.
-
-**Beneath the Lowest Intermediate Landing:** Ensures protection at the lowest point where a fire could start or spread.
-
-```js
-8.15.3
-  lorem: 'ipsum',
-  dolor: ['sit', 'amet', 'consectetur'],
-```
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-### Natus aspernatur iste
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+Some occupancies present unique fire protection challenges that go beyond standard hazard classification. These special situations require specific sprinkler types, system configurations, or design approaches that are addressed in dedicated NFPA 13 chapters and related standards. {% .lead %}
 
 ---
 
-## Concealed Spaces
+## High-piled storage
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+High-piled storage represents some of the most demanding fire scenarios in sprinkler design. The combination of concentrated fuel load, vertical fire spread through flue spaces, and limited access for manual firefighting makes these occupancies a specialty within the trade.
 
-### Voluptatem quas possimus
+### Rack storage
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+Steel storage racks allow products to be stored at heights of 20 feet or more. Fire can travel rapidly through the vertical flue spaces between pallets and between rows.
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+**Design approaches:**
+- **Ceiling-only ESFR** — high K-factor, high-pressure heads that suppress rack fires from the ceiling alone. Eliminates need for in-rack sprinklers but has strict clearance and obstruction requirements.
+- **Ceiling plus in-rack sprinklers** — standard or large-orifice ceiling heads combined with sprinklers at intermediate levels within the rack. More complex design but allows greater storage heights and configurations.
+- **CMSA (Control Mode Specific Application)** — ceiling heads designed for specific storage scenarios with prescribed design criteria.
 
-### Id vitae minima
+### Key variables
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+- Commodity classification (Class I-IV, Group A-C plastics)
+- Storage height and rack configuration (single-row, double-row, multi-row)
+- Aisle width
+- Presence of solid shelves (which block vertical flue space)
+- Cartoned vs. exposed (uncartoned) storage
 
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+{% callout type="note" title="NFPA 13 Chapters 20-26" %}
+Storage protection occupies nearly a third of NFPA 13 by page count. Chapters 20-26 cover the different storage arrangements, commodities, and sprinkler approaches in extensive detail. This is where experienced designers differentiate themselves.
+{% /callout %}
 
----
-
-## Elevator Hoistways and Machine Rooms
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
-
-### Corporis exercitationem
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-### Reprehenderit magni
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+{% figure src="/placeholder-diagram.svg" alt="Rack storage sprinkler arrangement" caption="In-rack sprinkler arrangement showing ceiling heads, intermediate-level in-rack heads, and flue spaces in a double-row rack configuration" /%}
 
 ---
 
-## Electrical Equipment Rooms
+## Attic protection
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+Combustible concealed spaces above ceilings — particularly wood-frame attic spaces — require special attention. Attic fires can spread rapidly through the concealed space before the occupants or fire department are aware.
 
-### Corporis exercitationem
+### Combustible concealed spaces
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+NFPA 13 requires sprinklers in combustible concealed spaces unless specific exemptions apply (such as spaces filled with non-combustible insulation, or small spaces with limited dimensions). The most common approaches:
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+- **Standard sprinklers in the attic space** — upright heads on piping above the ceiling, spaced per NFPA 13 requirements
+- **Listed attic sprinkler systems** — specifically designed and tested systems (such as the Tyco/Johnson Controls or Viking attic systems) that use proprietary head types and spacing patterns designed for the attic geometry
+- **Dry attic systems** — in unheated attics, dry pipe or preaction systems prevent freeze damage
 
-### Reprehenderit magni
+### Non-combustible concealed spaces
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+Concealed spaces formed entirely of non-combustible materials (steel deck, concrete) generally do not require sprinklers unless they contain combustible materials (cable, pipe insulation, stored items).
 
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
-
----
-
-## Cloud Ceilings
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
-
-### Corporis exercitationem
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-### Reprehenderit magni
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+{% callout type="warning" title="Attic sprinklers are often missed" %}
+Attic protection is one of the most commonly overlooked requirements, especially in residential and mixed-use construction. Always check whether the concealed space is combustible and whether an exemption applies.
+{% /callout %}
 
 ---
 
-## Shafts with Combustibles and Noncombustible Surfaces
+## Cold storage and freezers
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+Spaces maintained below 40°F present a challenge: water-filled pipes will freeze. The solution depends on the temperature range and the space configuration.
 
-### Corporis exercitationem
+### System types for cold spaces
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+- **Dry pipe systems** — the most common approach for spaces from 32°F down to extreme cold. Air or nitrogen fills the piping; water only enters when a head activates.
+- **Preaction systems** — double interlock preaction is common in freezer warehouses. Water does not enter the piping until both a detection system activates and a sprinkler head fuses, minimizing accidental water discharge in environments where water damage to frozen product is catastrophic.
+- **Antifreeze systems** — historically used for small cold spaces, but NFPA 13 has significantly restricted antifreeze use due to fire risk from certain antifreeze solutions. Only listed antifreeze solutions at listed concentrations are permitted per current editions.
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+### Design considerations
 
-### Reprehenderit magni
+- Dry heads extending from a wet system in a heated space into a walk-in cooler or freezer
+- Insulated piping in transitional spaces (loading docks, vestibules)
+- Nitrogen inerting to prevent corrosion in dry/preaction systems serving cold spaces
+- Higher design areas (30% increase) for dry systems due to delayed water delivery
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
-
----
-
-## Industrial Ovens and Furnaces
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
-
-### Corporis exercitationem
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-### Reprehenderit magni
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+{% figure src="/placeholder-diagram.svg" alt="Freezer sprinkler arrangement" caption="Double interlock preaction system serving a freezer warehouse, showing heated valve room, dry piping in the freezer, and detection system" /%}
 
 ---
 
-## Library Stacks
+## Parking structures
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+Parking garages have specific protection requirements that differ based on whether the structure is open or enclosed.
 
-### Corporis exercitationem
+### Open parking structures
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+A parking structure qualifies as "open" when it has sufficient wall openings on each tier for natural ventilation (per IBC criteria). Open structures typically qualify for Ordinary Hazard Group 1 protection.
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+- Design density: 0.15 gpm/sq ft over 1,500 sq ft
+- System type: wet pipe in heated climates; dry pipe or preaction where exposed to freezing
+- Head type: standard spray upright or pendent, typically K5.6 or K8.0
 
-### Reprehenderit magni
+### Enclosed parking structures
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+Enclosed garages without adequate natural ventilation require higher-level protection and may have additional requirements for smoke detection and exhaust.
 
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+### Considerations
+
+- Vehicle fuel types (gasoline, electric with lithium-ion batteries) affect fire behavior
+- Clearance above vehicles — heads must be positioned to avoid impact damage
+- Drainage — garage floors are sloped, affecting head positioning relative to the ceiling
+- Dry systems in exposed levels — managing low-point drains in sloped piping
 
 ---
 
-## Ducts
+## High-rise buildings
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+Buildings exceeding 75 feet in height (per IBC) require enhanced fire protection features, and the sprinkler system design reflects the unique challenges of protecting tall structures.
 
-### Corporis exercitationem
+### Floor control valves
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+Each floor (or group of floors) has a floor control valve assembly that includes:
+- A control valve to isolate individual floors for maintenance
+- A flow switch for floor-by-floor alarm indication
+- A drain and test connection
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+### Combined sprinkler/standpipe risers
 
-### Reprehenderit magni
+In most high-rises, the sprinkler riser also serves as the standpipe. NFPA 13 and NFPA 14 requirements must both be satisfied. The riser must be sized for the larger of the sprinkler demand or the standpipe demand.
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+### Pressure zones
 
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+In very tall buildings, the static pressure at lower floors can exceed the rating of sprinkler components (typically 175 psi). Pressure zones with separate risers, pressure-reducing valves, or intermediate pumps manage this.
+
+### Fire pumps
+
+Most high-rises require fire pumps to push water to upper floors. Some very tall buildings use staged pumps at intermediate mechanical floors.
+
+{% callout type="note" title="High-rise design is multidisciplinary" %}
+High-rise sprinkler design requires close coordination with the fire alarm system (for floor-specific annunciation), the standpipe system (often shared piping), the fire pump (critical for upper floors), and the architect (for riser shaft locations and floor control valve rooms).
+{% /callout %}
+
+---
+
+## Residential systems
+
+Residential occupancies can be protected under three different NFPA standards, each with different scopes and requirements:
+
+### NFPA 13D
+
+- Applies to one- and two-family dwellings and manufactured homes
+- Allows the most relaxed criteria (smaller water supply, limited coverage areas)
+- Does not require sprinklers in certain areas (bathrooms under 55 sq ft, closets, garages, attics)
+- Minimum 10-minute water supply duration
+
+### NFPA 13R
+
+- Applies to residential occupancies up to and including four stories
+- More protective than 13D but less than full NFPA 13
+- Allows omission of sprinklers in certain areas (attics, closets, bathrooms, balconies) depending on edition
+- Minimum 30-minute water supply duration
+
+### NFPA 13
+
+- Required for residential occupancies exceeding the scope of 13R (typically 5+ stories)
+- Full protection — no areas exempt from sprinkler coverage
+- Residential sprinkler heads required in dwelling units (quick response, listed for residential use)
+- Uses standard NFPA 13 water supply requirements
+
+### Multipurpose systems
+
+In residential construction, multipurpose piping systems serve both the sprinkler system and the domestic plumbing from the same piping network. NFPA 13D and 13R both permit this arrangement, which reduces cost by eliminating a separate dedicated sprinkler piping system.
+
+{% figure src="/placeholder-diagram.svg" alt="Residential sprinkler standards comparison" caption="Comparison of NFPA 13D, 13R, and 13 applicability based on building type and height" /%}
