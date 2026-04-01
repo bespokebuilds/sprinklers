@@ -39,7 +39,7 @@ export function Hero() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 lg:max-w-8xl lg:grid-cols-2 lg:px-8 xl:gap-x-16 xl:px-12">
           <div className="relative z-10 md:text-center lg:text-left">
             <Image
-              className="absolute bottom-full right-full -mb-56 -mr-72 opacity-50"
+              className="absolute bottom-full right-full -mb-56 -mr-72 opacity-50 hue-rotate-[160deg] saturate-150"
               src={blurCyanImage}
               alt=""
               width={530}
@@ -69,7 +69,7 @@ export function Hero() {
             </div>
             <div className="relative">
               <Image
-                className="absolute -right-64 -top-64"
+                className="absolute -right-64 -top-64 hue-rotate-[160deg] saturate-150"
                 src={blurCyanImage}
                 alt=""
                 width={530}
@@ -78,7 +78,7 @@ export function Hero() {
                 priority
               />
               <Image
-                className="absolute -bottom-40 -right-44"
+                className="absolute -bottom-40 -right-44 hue-rotate-[160deg] saturate-150"
                 src={blurIndigoImage}
                 alt=""
                 width={567}
