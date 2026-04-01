@@ -1,74 +1,77 @@
 ---
-title: How to contribute
+title: How to Contribute
 nextjs:
   metadata:
-    title: How to contribute
-    description: Quidem magni aut exercitationem maxime rerum eos.
+    title: How to Contribute
+    description: Guidelines for contributing to sprinkler.wiki -- how industry professionals can help improve this fire protection knowledge base.
 ---
 
-Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
-
----
-
-## Quis vel iste dicta
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
-
-### Et pariatur ab quas
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-```js
-/** @type {import('@tailwindlabs/lorem').ipsum} */
-export default {
-  lorem: 'ipsum',
-  dolor: ['sit', 'amet', 'consectetur'],
-  adipiscing: {
-    elit: true,
-  },
-}
-```
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-### Natus aspernatur iste
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+sprinkler.wiki is an open knowledge base for the fire protection industry. It is built and maintained by industry professionals who want to give back to the trade that supports their careers.
 
 ---
 
-## Quos porro ut molestiae
+## Why Contribute
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
-
-### Voluptatem quas possimus
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-### Id vitae minima
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+- **Help new designers** learn faster by documenting what took you years to figure out
+- **Preserve institutional knowledge** that is currently trapped in individual experience
+- **Improve the industry** by raising the baseline competency of every designer who uses this resource
+- **Give back** to a trade that relies on mentorship and shared knowledge
 
 ---
 
-## Vitae laborum maiores
+## What We Need
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+### Content Contributions
 
-### Corporis exercitationem
+- **Practical guidance** based on real-world design experience
+- **Code interpretations** with context (why the rule exists, not just what it says)
+- **Common mistakes** and how to avoid them
+- **Industry-specific knowledge** (healthcare, storage, high-rise, residential)
+- **Regional variations** in code adoption and AHJ interpretation
+- **Tool and software tips** for design platforms like AutoSPRINK, SprinkCAD, Revit
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+### Review and Corrections
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+- **Technical accuracy** -- find and report errors in existing content
+- **Code edition updates** -- flag content that references outdated code provisions
+- **Clarity improvements** -- identify sections that are confusing or incomplete
+- **Missing topics** -- suggest subjects that should be covered
 
-### Reprehenderit magni
+---
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+## How to Submit
 
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+### GitHub
+
+This site is maintained as an open-source project. To contribute:
+
+1. Fork the repository on GitHub
+2. Create a branch for your changes
+3. Write or edit content in Markdown (`.md` files in `src/app/docs/`)
+4. Submit a pull request with a description of your changes
+5. A maintainer will review and merge your contribution
+
+### Content Guidelines
+
+- Write in **plain, direct language** -- this is a reference for working professionals, not an academic paper
+- Include **specific code references** (e.g., "NFPA 13, Section 9.3.5") when citing requirements
+- Add **practical context** -- explain why a requirement exists, not just that it exists
+- Use **tables** for data that benefits from comparison
+- Include **common mistakes** when relevant -- learning from others' errors is valuable
+- Do not copy text from copyrighted sources (NFPA standards, manufacturer literature)
+
+### Content Structure
+
+Each page should follow this general pattern:
+
+1. **Introduction** -- what the topic is and why it matters
+2. **Core content** -- the technical details, organized with clear headings
+3. **Practical considerations** -- real-world tips and experience-based guidance
+4. **Common mistakes** -- what goes wrong and how to avoid it
+5. **Code references** -- which standards and sections apply
+
+---
+
+## Feedback
+
+If you find errors, have suggestions, or want to discuss content, open an issue on the GitHub repository. All feedback helps make this resource better for the industry.
