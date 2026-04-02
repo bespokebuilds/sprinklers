@@ -1,15 +1,9 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import { Listbox } from '@headlessui/react'
-import clsx from 'clsx'
 
-const themes = [
-  { name: 'Light', value: 'light', icon: LightIcon },
-  { name: 'Dark', value: 'dark', icon: DarkIcon },
-  { name: 'System', value: 'system', icon: SystemIcon },
-]
-
-function LightIcon(props) {
+function SunIcon(props) {
   return (
     <svg aria-hidden="true" viewBox="0 0 16 16" {...props}>
       <path
@@ -21,7 +15,7 @@ function LightIcon(props) {
   )
 }
 
-function DarkIcon(props) {
+function MoonIcon(props) {
   return (
     <svg aria-hidden="true" viewBox="0 0 16 16" {...props}>
       <path
@@ -33,20 +27,8 @@ function DarkIcon(props) {
   )
 }
 
-function SystemIcon(props) {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M1 4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-1.5l.31 1.242c.084.333.36.573.63.808.091.08.182.158.264.24A1 1 0 0 1 11 15H5a1 1 0 0 1-.704-1.71c.082-.082.173-.16.264-.24.27-.235.546-.475.63-.808L5.5 11H4a3 3 0 0 1-3-3V4Zm3-1a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z"
-      />
-    </svg>
-  )
-}
-
 export function ThemeSelector(props) {
-  let { theme, setTheme } = useTheme()
+  let { resolvedTheme, setTheme } = useTheme()
   let [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -57,61 +39,20 @@ export function ThemeSelector(props) {
     return <div className="h-6 w-6" />
   }
 
+  function toggleTheme() {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+  }
+
   return (
-    <Listbox as="div" value={theme} onChange={setTheme} {...props}>
-      <Listbox.Label className="sr-only">Theme</Listbox.Label>
-      <Listbox.Button
-        className="flex h-6 w-6 items-center justify-center rounded-lg shadow-md shadow-black/5 ring-1 ring-orange-200 bg-orange-50 dark:bg-red-900/80 dark:ring-inset dark:ring-red-700/50"
-        aria-label="Theme"
-      >
-        <LightIcon
-          className={clsx(
-            'h-4 w-4 dark:hidden',
-            theme === 'system' ? 'fill-red-700' : 'fill-red-600',
-          )}
-        />
-        <DarkIcon
-          className={clsx(
-            'hidden h-4 w-4 dark:block',
-            theme === 'system' ? 'fill-orange-300' : 'fill-orange-200',
-          )}
-        />
-      </Listbox.Button>
-      <Listbox.Options className="absolute right-0 top-full mt-3 w-36 space-y-1 rounded-xl bg-white p-3 text-sm font-medium shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-red-950 dark:ring-red-800/50">
-        {themes.map((theme) => (
-          <Listbox.Option
-            key={theme.value}
-            value={theme.value}
-            className={({ active, selected }) =>
-              clsx(
-                'flex cursor-pointer select-none items-center rounded-[0.625rem] p-1',
-                {
-                  'text-orange-500': selected,
-                  'text-slate-900 dark:text-white': active && !selected,
-                  'text-slate-700 dark:text-slate-400': !active && !selected,
-                  'bg-orange-50 dark:bg-red-900/40': active,
-                },
-              )
-            }
-          >
-            {({ selected }) => (
-              <>
-                <div className="rounded-md bg-white p-1 shadow ring-1 ring-orange-200/50 dark:bg-red-900/80 dark:ring-inset dark:ring-red-700/50">
-                  <theme.icon
-                    className={clsx(
-                      'h-4 w-4',
-                      selected
-                        ? 'fill-orange-500 dark:fill-orange-400'
-                        : 'fill-orange-300 dark:fill-orange-600',
-                    )}
-                  />
-                </div>
-                <div className="ml-3">{theme.name}</div>
-              </>
-            )}
-          </Listbox.Option>
-        ))}
-      </Listbox.Options>
-    </Listbox>
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className="flex h-6 w-6 items-center justify-center rounded-lg shadow-md shadow-black/5 ring-1 ring-orange-200 bg-orange-50 dark:bg-red-900/80 dark:ring-inset dark:ring-red-700/50"
+      aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      {...props}
+    >
+      <SunIcon className="h-4 w-4 fill-red-600 dark:hidden" />
+      <MoonIcon className="hidden h-4 w-4 fill-orange-200 dark:block" />
+    </button>
   )
 }

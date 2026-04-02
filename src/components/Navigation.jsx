@@ -1,8 +1,11 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 
-import { navigation } from '@/lib/navigation'
+import { navigationTabs } from '@/lib/navigation'
 
 function GitHubIcon(props) {
   return (
@@ -12,13 +15,59 @@ function GitHubIcon(props) {
   )
 }
 
+function findTabForPath(pathname) {
+  for (let tab of navigationTabs) {
+    for (let section of tab.sections) {
+      for (let link of section.links) {
+        if (link.href === pathname) {
+          return tab.id
+        }
+      }
+    }
+  }
+  return navigationTabs[0].id
+}
+
+export function NavigationTabs({ activeTab, onTabChange, className }) {
+  return (
+    <div className={clsx('flex flex-wrap gap-1', className)}>
+      {navigationTabs.map((tab) => (
+        <button
+          key={tab.id}
+          onClick={() => onTabChange(tab.id)}
+          className={clsx(
+            'rounded-md px-2.5 py-1.5 text-xs font-medium transition-colors',
+            tab.id === activeTab
+              ? 'bg-red-500 text-white'
+              : 'text-orange-600 hover:bg-orange-50 hover:text-orange-800 dark:text-orange-400 dark:hover:bg-red-950/50 dark:hover:text-orange-300',
+          )}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+  )
+}
+
 export function Navigation({ className, onLinkClick }) {
   let pathname = usePathname()
+  let [activeTab, setActiveTab] = useState(() => findTabForPath(pathname))
+
+  useEffect(() => {
+    setActiveTab(findTabForPath(pathname))
+  }, [pathname])
+
+  let currentTab = navigationTabs.find((tab) => tab.id === activeTab)
 
   return (
     <nav className={clsx('text-base lg:text-sm', className)}>
+      <NavigationTabs
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        className="mb-6"
+      />
       <ul role="list" className="space-y-9">
-        {navigation.map((section) => (
+        {currentTab?.sections.map((section) => (
           <li key={section.title}>
             <h2 className="font-display font-medium text-orange-900 dark:text-white">
               {section.title}
@@ -33,7 +82,7 @@ export function Navigation({ className, onLinkClick }) {
                     href={link.href}
                     onClick={onLinkClick}
                     className={clsx(
-                      'block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-tranorange-y-1/2 before:rounded-full',
+                      'block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full',
                       link.href === pathname
                         ? 'font-semibold text-red-500 before:bg-red-500'
                         : 'text-orange-500 before:hidden before:bg-orange-300 hover:text-orange-600 hover:before:block dark:text-orange-400 dark:before:bg-orange-700 dark:hover:text-orange-300',
