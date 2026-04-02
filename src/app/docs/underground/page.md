@@ -27,6 +27,10 @@ Per NFPA 24 Section 10.1, all underground piping materials must be listed and ap
 
 ## Thrust restraint
 
+{% callout type="note" title="Interactive tool available" %}
+Use the [Thrust Block Calculator](/docs/tools-thrust-block) to quickly size thrust blocks for any pipe size, fitting type, and soil condition.
+{% /callout %}
+
 Unbalanced hydraulic forces at fittings (tees, bends, reducers, dead ends) must be resisted by thrust blocks or restrained joints.
 
 ### Thrust block sizing formula

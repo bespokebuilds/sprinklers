@@ -47,6 +47,10 @@ Branch lines have significant exemptions from sway bracing requirements under NF
 
 ---
 
+{% callout type="note" title="Interactive tool available" %}
+Use the [Pipe Weight and Seismic Brace Load Calculator](/docs/tools-pipe-weight) to calculate brace loads for any pipe size, zone length, and seismic design category.
+{% /callout %}
+
 ## Brace load formula
 
 The horizontal seismic load on a brace is calculated as:

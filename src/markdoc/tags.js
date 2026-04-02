@@ -1,5 +1,9 @@
 import { Callout } from '@/components/Callout'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
+import { FrictionLossCalc } from '@/components/calculators/FrictionLossCalc'
+import { ThrustBlockCalc } from '@/components/calculators/ThrustBlockCalc'
+import { WaterSupplyCalc } from '@/components/calculators/WaterSupplyCalc'
+import { PipeWeightCalc } from '@/components/calculators/PipeWeightCalc'
 
 const tags = {
   callout: {
@@ -41,6 +45,22 @@ const tags = {
       icon: { type: String },
       href: { type: String },
     },
+  },
+  'friction-loss-calc': {
+    selfClosing: true,
+    render: FrictionLossCalc,
+  },
+  'thrust-block-calc': {
+    selfClosing: true,
+    render: ThrustBlockCalc,
+  },
+  'water-supply-calc': {
+    selfClosing: true,
+    render: WaterSupplyCalc,
+  },
+  'pipe-weight-calc': {
+    selfClosing: true,
+    render: PipeWeightCalc,
   },
 }
 

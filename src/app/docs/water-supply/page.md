@@ -8,6 +8,10 @@ nextjs:
 
 Flow test data, supply curve math, and device losses — everything needed to determine whether a water supply can meet sprinkler system demand. {% .lead %}
 
+{% callout type="note" title="Interactive tool available" %}
+Use the [Water Supply Calculator](/docs/tools-water-supply) to plot supply curves from flow test data with elevation correction.
+{% /callout %}
+
 ## Flow test calculation
 
 A fire flow test produces three values: **static pressure** (no flow), **residual pressure** (at measured flow), and **measured flow** (gpm). From these, calculate available flow at any residual pressure using the N^1.85 relationship.

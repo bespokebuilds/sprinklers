@@ -10,6 +10,10 @@ Quick reference for NFPA 13 hydraulic calculations: friction loss formulas, equi
 
 ---
 
+{% callout type="note" title="Interactive tool available" %}
+Use the [Friction Loss Calculator](/docs/tools-friction-loss) to quickly calculate Hazen-Williams friction loss for any pipe material, size, and flow rate.
+{% /callout %}
+
 ## Hazen-Williams friction loss formula
 
 All NFPA 13 hydraulic calculations use Hazen-Williams:

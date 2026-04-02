@@ -4,6 +4,12 @@ export const navigationTabs = [
     label: 'Design & Engineering',
     sections: [
       {
+        title: 'Overview',
+        links: [
+          { title: 'Home', href: '/' },
+        ],
+      },
+      {
         title: 'Water Supply and Hydraulics',
         links: [
           { title: 'Water Supply Sources', href: '/docs/water-supply' },
@@ -116,7 +122,6 @@ export const navigationTabs = [
       {
         title: 'Getting Started',
         links: [
-          { title: 'Overview', href: '/' },
           { title: 'Codes and Standards', href: '/docs/codes-and-standards' },
         ],
       },
@@ -143,6 +148,21 @@ export const navigationTabs = [
           { title: 'Pipe and Fittings', href: '/docs/pipe-and-fittings' },
           { title: 'Hangers, Bracing, and Restraints', href: '/docs/hangers-bracing-restraints' },
           { title: 'Valves and Trim', href: '/docs/valves-and-trim' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'tools',
+    label: 'Tools',
+    sections: [
+      {
+        title: 'Calculators',
+        links: [
+          { title: 'Friction Loss Calculator', href: '/docs/tools-friction-loss' },
+          { title: 'Thrust Block Calculator', href: '/docs/tools-thrust-block' },
+          { title: 'Water Supply Calculator', href: '/docs/tools-water-supply' },
+          { title: 'Pipe Weight Calculator', href: '/docs/tools-pipe-weight' },
         ],
       },
     ],
