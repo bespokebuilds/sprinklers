@@ -67,13 +67,13 @@ export function ThemeSelector(props) {
         <LightIcon
           className={clsx(
             'h-4 w-4 dark:hidden',
-            theme === 'system' ? 'fill-red-800' : 'fill-orange-400',
+            theme === 'system' ? 'fill-red-700' : 'fill-red-600',
           )}
         />
         <DarkIcon
           className={clsx(
             'hidden h-4 w-4 dark:block',
-            theme === 'system' ? 'fill-red-800' : 'fill-orange-400',
+            theme === 'system' ? 'fill-orange-300' : 'fill-orange-200',
           )}
         />
       </Listbox.Button>
@@ -101,8 +101,8 @@ export function ThemeSelector(props) {
                     className={clsx(
                       'h-4 w-4',
                       selected
-                        ? 'fill-orange-400 dark:fill-orange-400'
-                        : 'fill-slate-400',
+                        ? 'fill-orange-500 dark:fill-orange-400'
+                        : 'fill-orange-300 dark:fill-orange-600',
                     )}
                   />
                 </div>
