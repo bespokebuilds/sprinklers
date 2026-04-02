@@ -72,15 +72,15 @@ Residential sprinkler heads are listed under UL 1626 and are specifically design
 
 Every sprinkler head is rated to activate at a specific temperature. NFPA 13, Section 6.2.5 and Table 6.2.5.1 define the standard temperature classifications. Sprinkler heads use either a color-coded glass bulb or a color-coded frame (for fusible link types) to identify the temperature rating.
 
-| Classification | Temperature Range | Glass Bulb Color | Frame Color (Fusible Link) |
-|---|---|---|---|
-| Ordinary | 135 to 170 degrees F | Orange or Red | Uncolored or Black |
-| Intermediate | 175 to 225 degrees F | Yellow or Green | White |
-| High | 250 to 300 degrees F | Blue | Blue |
-| Extra High | 325 to 375 degrees F | Purple | Red |
-| Very Extra High | 400 to 475 degrees F | Black | Green |
-| Ultra High | 500 to 575 degrees F | Black | Orange |
-| 650 degrees F | 650 degrees F | Black | Black |
+| Classification | Temp Range (F) | Max Ceiling Temp (F) | Glass Bulb Color | Frame Color |
+|---|---|---|---|---|
+| Ordinary | 135-170 | 100 | Orange (135) or Red (155) | Uncolored or Black |
+| Intermediate | 175-225 | 150 | Yellow (175) or Green (200) | White |
+| High | 250-300 | 225 | Blue | Blue |
+| Extra High | 325-375 | 300 | Purple | Red |
+| Very Extra High | 400-475 | 375 | Black | Green |
+| Ultra High | 500-575 | 475 | Black | Orange |
+| 650 F | 650 | 625 | Black | Black |
 
 {% callout type="note" title="Selecting Temperature Ratings" %}
 NFPA 13, Section 6.2.5.2 requires sprinkler temperature ratings to be selected based on the maximum expected ceiling temperature. Ordinary temperature heads are suitable when the maximum ceiling temperature does not exceed 100 degrees F. Near heat sources such as unit heaters, skylights, or cooking equipment, use intermediate or high temperature heads as required by Section 6.2.5.3.

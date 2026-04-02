@@ -3,166 +3,170 @@ title: Special Occupancies
 nextjs:
   metadata:
     title: Special Occupancies
-    description: Sprinkler design for special occupancies — high-piled storage, attics, cold storage, parking structures, high-rises, and residential systems.
+    description: ESFR storage criteria, in-rack sprinkler requirements, residential system comparisons, cold storage, and high-rise design parameters.
 ---
 
-Some occupancies present unique fire protection challenges that go beyond standard hazard classification. These special situations require specific sprinkler types, system configurations, or design approaches that are addressed in dedicated NFPA 13 chapters and related standards. {% .lead %}
+## ESFR design criteria
 
----
+ESFR (Early Suppression Fast Response) sprinklers are ceiling-only protection for storage. No in-rack sprinklers are required when ESFR criteria are met.
 
-## High-piled storage
+| K-Factor | Min Pressure (psi) | Sprinklers in Calc | Max Ceiling Height (ft) | Max Storage Height (ft) | Commodity |
+| --- | --- | --- | --- | --- | --- |
+| K14.0 | 75 | 12 | 35 | 30 | Class I-IV |
+| K16.8 | 52 | 12 | 40 | 35 | Class I-IV |
+| K22.4 | 75 | 12 | 40 | 35 | Group A plastics |
+| K25.2 | 60 | 12 | 40 | 40 | Most commodities |
 
-High-piled storage represents some of the most demanding fire scenarios in sprinkler design. The combination of concentrated fuel load, vertical fire spread through flue spaces, and limited access for manual firefighting makes these occupancies a specialty within the trade.
-
-### Rack storage
-
-Steel storage racks allow products to be stored at heights of 20 feet or more. Fire can travel rapidly through the vertical flue spaces between pallets and between rows.
-
-**Design approaches:**
-- **Ceiling-only ESFR** — high K-factor, high-pressure heads that suppress rack fires from the ceiling alone. Eliminates need for in-rack sprinklers but has strict clearance and obstruction requirements.
-- **Ceiling plus in-rack sprinklers** — standard or large-orifice ceiling heads combined with sprinklers at intermediate levels within the rack. More complex design but allows greater storage heights and configurations.
-- **CMSA (Control Mode Specific Application)** — ceiling heads designed for specific storage scenarios with prescribed design criteria.
-
-### Key variables
-
-- Commodity classification (Class I-IV, Group A-C plastics)
-- Storage height and rack configuration (single-row, double-row, multi-row)
-- Aisle width
-- Presence of solid shelves (which block vertical flue space)
-- Cartoned vs. exposed (uncartoned) storage
-
-{% callout type="note" title="NFPA 13 Chapters 20-26" %}
-Storage protection occupies nearly a third of NFPA 13 by page count. Chapters 20-26 cover the different storage arrangements, commodities, and sprinkler approaches in extensive detail. This is where experienced designers differentiate themselves.
+{% callout type="warning" %}
+ESFR heads require unobstructed discharge. No beam construction, no solid shelving, no open-top containers that could block spray. If any obstruction exists, ESFR is not an option — use CMSA or in-rack protection.
 {% /callout %}
 
-{% figure src="/placeholder-diagram.svg" alt="Rack storage sprinkler arrangement" caption="In-rack sprinkler arrangement showing ceiling heads, intermediate-level in-rack heads, and flue spaces in a double-row rack configuration" /%}
+**ESFR installation constraints:**
+
+- Deflector to ceiling: 6" to 14" (K14/K16.8) or 6" to 18" (K22.4+)
+- Max spacing: 100 sq ft per head, 10 ft x 10 ft typical
+- Min aisle width: 4 ft (for storage up to 25 ft), 8 ft (for storage above 25 ft)
+- Draft curtains: required at building perimeter if roof slope > 2 in 12
+- Ceiling pockets: max 2 ft deep, otherwise add heads in pocket
 
 ---
 
-## Attic protection
+## Commodity classification quick reference
 
-Combustible concealed spaces above ceilings — particularly wood-frame attic spaces — require special attention. Attic fires can spread rapidly through the concealed space before the occupants or fire department are aware.
+| Class | Description | Examples |
+| --- | --- | --- |
+| Class I | Non-combustible product on wood pallets | Metal parts, glass, ceramic |
+| Class II | Class I in single-layer corrugated cartons | Boxed metal hardware |
+| Class III | Wood, paper, natural fiber products | Furniture, lumber, clothing |
+| Class IV | Class I-III containing Group A plastics up to 5% | Electronics in foam packaging |
+| Group A Plastics | > 5% Group A plastics by weight or volume | ABS, polystyrene, polyurethane foam |
+| Group B Plastics | Non-expanded plastics | Solid PVC, nylon, fluoroplastics |
+| Group C Plastics | Low-hazard plastics | PTFE, phenolics, melamines |
 
-### Combustible concealed spaces
-
-NFPA 13 requires sprinklers in combustible concealed spaces unless specific exemptions apply (such as spaces filled with non-combustible insulation, or small spaces with limited dimensions). The most common approaches:
-
-- **Standard sprinklers in the attic space** — upright heads on piping above the ceiling, spaced per NFPA 13 requirements
-- **Listed attic sprinkler systems** — specifically designed and tested systems (such as the Tyco/Johnson Controls or Viking attic systems) that use proprietary head types and spacing patterns designed for the attic geometry
-- **Dry attic systems** — in unheated attics, dry pipe or preaction systems prevent freeze damage
-
-### Non-combustible concealed spaces
-
-Concealed spaces formed entirely of non-combustible materials (steel deck, concrete) generally do not require sprinklers unless they contain combustible materials (cable, pipe insulation, stored items).
-
-{% callout type="warning" title="Attic sprinklers are often missed" %}
-Attic protection is one of the most commonly overlooked requirements, especially in residential and mixed-use construction. Always check whether the concealed space is combustible and whether an exemption applies.
+{% callout %}
+Commodity classification is the single most impactful variable in storage design. Misclassification leads to under-designed systems. When in doubt, classify up.
 {% /callout %}
 
 ---
 
-## Cold storage and freezers
+## In-rack sprinkler requirements
 
-Spaces maintained below 40°F present a challenge: water-filled pipes will freeze. The solution depends on the temperature range and the space configuration.
+In-rack sprinklers are required when ceiling-only protection (CMSA or ESFR) cannot meet the storage configuration. NFPA 13 Chapters 20-26 (2022 edition) provide specific requirements.
 
-### System types for cold spaces
+**When in-rack is typically required:**
 
-- **Dry pipe systems** — the most common approach for spaces from 32°F down to extreme cold. Air or nitrogen fills the piping; water only enters when a head activates.
-- **Preaction systems** — double interlock preaction is common in freezer warehouses. Water does not enter the piping until both a detection system activates and a sprinkler head fuses, minimizing accidental water discharge in environments where water damage to frozen product is catastrophic.
-- **Antifreeze systems** — historically used for small cold spaces, but NFPA 13 has significantly restricted antifreeze use due to fire risk from certain antifreeze solutions. Only listed antifreeze solutions at listed concentrations are permitted per current editions.
+- Rack storage over 25 ft with solid shelving
+- Open-top containers blocking ceiling spray
+- Narrow aisle (< 4 ft) storage configurations
+- Storage heights exceeding ESFR capability for the commodity class
 
-### Design considerations
+**In-rack sprinkler placement:**
 
-- Dry heads extending from a wet system in a heated space into a walk-in cooler or freezer
-- Insulated piping in transitional spaces (loading docks, vestibules)
-- Nitrogen inerting to prevent corrosion in dry/preaction systems serving cold spaces
-- Higher design areas (30% increase) for dry systems due to delayed water delivery
+| Rack Configuration | First Level | Additional Levels |
+| --- | --- | --- |
+| Single-row rack, Class I-IV | At top of storage tier | Every 10-12 ft of storage height |
+| Double-row rack, Class I-IV | At top of storage tier | Every 10-12 ft of storage height |
+| Single-row rack, Group A plastic | At top of storage tier | Every 8-10 ft of storage height |
+| Multi-row rack (> 2 deep) | At top of storage tier | Per calculation — consult Chapter 25 |
 
-{% figure src="/placeholder-diagram.svg" alt="Freezer sprinkler arrangement" caption="Double interlock preaction system serving a freezer warehouse, showing heated valve room, dry piping in the freezer, and detection system" /%}
+**Clearances for in-rack heads:**
 
----
+- Min 6 inches below any horizontal barrier (shelf, rack beam)
+- Min 3 inches to any stored commodity
+- Longitudinal flue space: min 3 inches between back-to-back loads
+- Transverse flue space: min 6 inches at uprights
 
-## Parking structures
-
-Parking garages have specific protection requirements that differ based on whether the structure is open or enclosed.
-
-### Open parking structures
-
-A parking structure qualifies as "open" when it has sufficient wall openings on each tier for natural ventilation (per IBC criteria). Open structures typically qualify for Ordinary Hazard Group 1 protection.
-
-- Design density: 0.15 gpm/sq ft over 1,500 sq ft
-- System type: wet pipe in heated climates; dry pipe or preaction where exposed to freezing
-- Head type: standard spray upright or pendent, typically K5.6 or K8.0
-
-### Enclosed parking structures
-
-Enclosed garages without adequate natural ventilation require higher-level protection and may have additional requirements for smoke detection and exhaust.
-
-### Considerations
-
-- Vehicle fuel types (gasoline, electric with lithium-ion batteries) affect fire behavior
-- Clearance above vehicles — heads must be positioned to avoid impact damage
-- Drainage — garage floors are sloped, affecting head positioning relative to the ceiling
-- Dry systems in exposed levels — managing low-point drains in sloped piping
+{% figure src="/placeholder-diagram.svg" alt="In-rack sprinkler placement diagram showing flue spaces, head locations, and clearances" caption="Typical in-rack sprinkler placement in double-row rack storage." /%}
 
 ---
 
-## High-rise buildings
+## Residential sprinkler standards comparison
 
-Buildings exceeding 75 feet in height (per IBC) require enhanced fire protection features, and the sprinkler system design reflects the unique challenges of protecting tall structures.
+| Feature | NFPA 13D | NFPA 13R | NFPA 13 |
+| --- | --- | --- | --- |
+| Applies to | 1-2 family dwellings, manufactured homes | Residential up to 4 stories | All buildings |
+| Design goal | Life safety only | Life safety only | Property + life safety |
+| Water supply duration | 10 min | 30 min | 30-60 min (per hazard) |
+| Exempt areas | Bathrooms < 55 sq ft, closets < 24 sq ft, garages, attics, open porches | Attics, closets < 24 sq ft, balconies, bathrooms < 55 sq ft (varies by edition) | None |
+| Head type | Residential listed | Residential listed | Residential in dwelling units, commercial elsewhere |
+| Multipurpose piping | Permitted | Permitted | Not permitted |
+| Min heads flowing | 2 | Per hydraulic calc | Per hydraulic calc |
+| Antifreeze | Listed solutions only | Listed solutions only | Listed solutions only |
+| System types | Wet, multipurpose | Wet, dry, multipurpose | Wet, dry, preaction, deluge |
 
-### Floor control valves
+{% callout type="warning" %}
+NFPA 13D does not require monitoring. NFPA 13R and 13 typically require waterflow alarm monitoring. Verify local amendments — many jurisdictions modify 13D/13R requirements.
+{% /callout %}
 
-Each floor (or group of floors) has a floor control valve assembly that includes:
-- A control valve to isolate individual floors for maintenance
-- A flow switch for floor-by-floor alarm indication
-- A drain and test connection
+**Residential head design data:**
 
-### Combined sprinkler/standpipe risers
+- K-factor: typically K4.9 or K5.6
+- Minimum operating pressure: per listing, usually 7-10 psi
+- Temperature rating: 155F or 175F (verify listing)
+- Coverage: typically up to 16 ft x 16 ft (256 sq ft) at listed pressure
 
-In most high-rises, the sprinkler riser also serves as the standpipe. NFPA 13 and NFPA 14 requirements must both be satisfied. The riser must be sized for the larger of the sprinkler demand or the standpipe demand.
+---
 
-### Pressure zones
+## Cold storage and freezer design
 
-In very tall buildings, the static pressure at lower floors can exceed the rating of sprinkler components (typically 175 psi). Pressure zones with separate risers, pressure-reducing valves, or intermediate pumps manage this.
+Cold environments create significant challenges for sprinkler systems.
 
-### Fire pumps
+**System selection:**
 
-Most high-rises require fire pumps to push water to upper floors. Some very tall buildings use staged pumps at intermediate mechanical floors.
+| Environment | Recommended System | Notes |
+| --- | --- | --- |
+| Cooler (32-40F) | Wet pipe | Standard approach, no penalties |
+| Freezer (0 to 32F) | Dry pipe or preaction | Dry pipe with nitrogen recommended |
+| Deep freeze (below 0F) | Dry pipe or preaction | Must use dry-barrel heads; nitrogen inerting strongly recommended |
 
-{% callout type="note" title="High-rise design is multidisciplinary" %}
-High-rise sprinkler design requires close coordination with the fire alarm system (for floor-specific annunciation), the standpipe system (often shared piping), the fire pump (critical for upper floors), and the architect (for riser shaft locations and floor control valve rooms).
+**Design penalties for dry/preaction systems:**
+
+- 30% increase in design area (equivalent to higher demand)
+- Alternatively, increase density by 0.05 gpm/sq ft above the base density
+- Quick-response head reductions do NOT apply to dry or preaction systems
+
+**Cold storage-specific requirements:**
+
+- Antifreeze systems: listed solutions only (post-2013 editions). Glycerin and propylene glycol solutions must be UL listed for the specific concentration. Most AHJs discourage antifreeze entirely.
+- Dry systems: nitrogen inerting recommended to prevent internal corrosion. Compressed air accelerates MIC (microbiologically influenced corrosion) in wet-dry cycling.
+- Insulated fittings at the cold/warm boundary to prevent condensation and ice formation
+- Heat tracing on any wet piping that passes through cold zones
+- Galvanized pipe or internally coated pipe recommended for all cold storage dry systems
+
+{% callout %}
+Nitrogen inerting (NFPA 13, Section 7.4.2) is not yet mandatory in all editions but is increasingly specified by insurance carriers and AHJs for dry and preaction systems, especially in cold storage.
 {% /callout %}
 
 ---
 
-## Residential systems
+## High-rise design parameters
 
-Residential occupancies can be protected under three different NFPA standards, each with different scopes and requirements:
+NFPA 13 and IBC define high-rise as buildings with an occupied floor more than 75 ft above the lowest level of fire department vehicle access.
 
-### NFPA 13D
+| Requirement | Standard | Details |
+| --- | --- | --- |
+| Floor control valve assembly | NFPA 13 Section 8.17.2 | OS&Y or butterfly valve, check valve, drain, gauges, test connection — one per floor per zone |
+| Component pressure rating | NFPA 13 | 175 psi max working pressure for standard components |
+| High-pressure components | NFPA 13 | Required above 175 psi — 250 psi or 300 psi rated |
+| Pressure zones | IBC / NFPA 14 | Zone when pressure exceeds 175 psi at the lowest head |
+| Fire pump(s) | NFPA 20 | Typically required; redundant power supply mandatory |
+| Standpipe integration | NFPA 14 | Combined sprinkler/standpipe systems common |
+| Seismic bracing | ASCE 7 / NFPA 13 | Required in seismic design categories C, D, E, F |
 
-- Applies to one- and two-family dwellings and manufactured homes
-- Allows the most relaxed criteria (smaller water supply, limited coverage areas)
-- Does not require sprinklers in certain areas (bathrooms under 55 sq ft, closets, garages, attics)
-- Minimum 10-minute water supply duration
+**Pressure zone layout:**
 
-### NFPA 13R
+- Calculate static pressure at the lowest sprinkler on each floor: 0.433 psi per foot of elevation
+- If static + system pressure exceeds 175 psi, a pressure-reducing valve or separate zone is required
+- Typical zone height: 250-300 ft depending on supply pressure and system demand
 
-- Applies to residential occupancies up to and including four stories
-- More protective than 13D but less than full NFPA 13
-- Allows omission of sprinklers in certain areas (attics, closets, bathrooms, balconies) depending on edition
-- Minimum 30-minute water supply duration
+{% callout type="warning" %}
+PRVs (pressure-reducing valves) at floor control assemblies must be set and tested during commissioning. A PRV failure can result in heads exceeding their rated pressure, voiding listings.
+{% /callout %}
 
-### NFPA 13
+**High-rise fire pump considerations:**
 
-- Required for residential occupancies exceeding the scope of 13R (typically 5+ stories)
-- Full protection — no areas exempt from sprinkler coverage
-- Residential sprinkler heads required in dwelling units (quick response, listed for residential use)
-- Uses standard NFPA 13 water supply requirements
-
-### Multipurpose systems
-
-In residential construction, multipurpose piping systems serve both the sprinkler system and the domestic plumbing from the same piping network. NFPA 13D and 13R both permit this arrangement, which reduces cost by eliminating a separate dedicated sprinkler piping system.
-
-{% figure src="/placeholder-diagram.svg" alt="Residential sprinkler standards comparison" caption="Comparison of NFPA 13D, 13R, and 13 applicability based on building type and height" /%}
+- Electric and diesel drivers both acceptable per NFPA 20
+- Secondary power supply (generator or second utility feed) required
+- Fire pump test header must be accessible at grade level
+- Jockey pump required for pressure maintenance
+- Pump room must be separated per IBC — 2-hour fire barrier typical

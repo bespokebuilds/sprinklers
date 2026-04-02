@@ -3,136 +3,143 @@ title: Water Storage Tanks
 nextjs:
   metadata:
     title: Water Storage Tanks
-    description: Fire protection water storage tanks — types, sizing, NFPA 22 requirements, and maintenance considerations.
+    description: Fire protection water storage tank sizing, NFPA 22 requirements, and maintenance intervals.
 ---
 
-Water storage tanks provide a dedicated, reliable supply of water for fire sprinkler systems when the municipal supply is insufficient or unavailable. NFPA 22 (Standard for Water Tanks for Private Fire Protection) governs their design, construction, and maintenance. {% .lead %}
+Tank sizing calculations, NFPA 22 construction requirements, inspection schedules, and freeze protection for fire protection water storage. {% .lead %}
 
----
+## Tank sizing
 
-## When tanks are needed
+Tank volume = (sprinkler demand + hose stream allowance) x duration. The table below shows pre-calculated minimum volumes for common hazard classifications per NFPA 13.
 
-A dedicated water storage tank is typically required when:
+| Hazard Classification | Sprinkler + Hose (gpm) | Duration (min) | Minimum Volume (gal) |
+|---|---|---|---|
+| Light Hazard | 250 | 30 | 7,500 |
+| Ordinary Hazard Group 1 | 500 | 60 | 30,000 |
+| Ordinary Hazard Group 2 | 600 | 60 | 36,000 |
+| Extra Hazard Group 1 | 1,000 | 90 | 90,000 |
+| Extra Hazard Group 2 | 1,250 | 90 | 112,500 |
+| High-Piled Storage (typical) | 1,500 | 120 | 180,000 |
 
-- The municipal system cannot deliver the required flow for the full system duration
-- The project is in a rural area without municipal water
-- The building owner or insurer requires an independent supply
-- A fire pump draws from a suction source rather than a pressurized main
-
----
-
-## Tank types
-
-### Ground-level steel tanks
-
-The most common type for fire protection. Bolted or welded steel tanks sit on a concrete foundation at grade level. They require a fire pump to deliver water at adequate pressure to the sprinkler system.
-
-- Capacity: commonly 5,000 to 500,000+ gallons
-- Construction: bolted steel panels or shop-welded steel
-- Foundation: concrete ring wall or full slab, designed for the tank's full-weight load
-
-### Elevated tanks
-
-Elevated tanks use gravity to provide pressure without a pump. Every foot of elevation above the highest sprinkler provides approximately 0.433 psi. A 100-foot elevation provides about 43 psi at the sprinkler level.
-
-- Advantage: no pump needed for pressure, highly reliable
-- Limitation: expensive to construct, height needed may be impractical
-- Common in: campus settings, rural areas, municipalities
-
-### Pressure tanks
-
-An enclosed vessel partially filled with water and pressurized with air. When the system operates, compressed air pushes the water out. Limited in capacity and only suitable for small systems or supplemental supply.
-
-- Sizing: only about 2/3 of the tank volume is usable water (the rest is air)
-- NFPA 22 governs construction and testing
-
-### Underground tanks
-
-Buried concrete or fiberglass tanks that feed a vertical turbine fire pump. Common when site constraints prevent above-ground storage.
-
-- Construction: reinforced concrete, fiberglass, or coated steel
-- Access: manways for inspection, level indicators
-- Protection: corrosion protection for steel, soil load considerations
-
-{% figure src="/placeholder-diagram.svg" alt="Water storage tank types" caption="Common fire protection water storage tank configurations — ground-level, elevated, pressure, and underground" /%}
-
----
-
-## Sizing
-
-Tank volume is determined by the total water demand over the required duration:
-
-**Volume (gallons) = (Sprinkler demand + Hose stream allowance) x Duration (minutes)**
-
-### Duration requirements by hazard (NFPA 13)
-
-- Light Hazard: 30 minutes
-- Ordinary Hazard Group 1: 60 minutes
-- Ordinary Hazard Group 2: 60 minutes
-- Extra Hazard Group 1: 90 minutes
-- Extra Hazard Group 2: 90-120 minutes
-- High-piled storage: 60-120 minutes depending on commodity and storage height
-
-### Example
-
-An Ordinary Hazard Group 1 system with 300 gpm sprinkler demand and 250 gpm hose stream:
-- Total demand: 550 gpm
-- Duration: 60 minutes
-- Required volume: 550 x 60 = **33,000 gallons**
-
-{% callout type="note" title="Tank capacity vs. usable volume" %}
-The tank must hold the full calculated volume as usable water above the suction pipe inlet. Account for the dead storage below the inlet, sediment space, and any volume reserved for other purposes.
+{% callout %}
+These are minimum planning values. Actual demand depends on hydraulic calculations, building area, and the specific commodities stored. Always verify against NFPA 13 and the applicable storage standard (NFPA 30, 32, etc.).
 {% /callout %}
 
----
+### Volume formula
+
+**V = Q x t**
+
+Where:
+- **V** = required tank volume (gallons)
+- **Q** = total demand — sprinkler flow + hose stream allowance (gpm)
+- **t** = required duration (minutes)
+
+Add volume for dead storage (water below the suction outlet), evaporation, and fire department connection (FDC) if the tank also serves as the FDC supply.
+
+## Elevated tank pressure
+
+Elevated tanks provide pressure by gravity. Pressure at the base of the riser = **0.433 psi per foot** of elevation from the tank water surface to the discharge point.
+
+| Water Level Above Discharge (ft) | Available Pressure (psi) |
+|---|---|
+| 20 | 8.7 |
+| 40 | 17.3 |
+| 60 | 26.0 |
+| 80 | 34.6 |
+| 100 | 43.3 |
+| 120 | 52.0 |
+| 150 | 65.0 |
+| 200 | 86.6 |
+
+{% callout type="warning" %}
+Use the **low water level** (not the overflow level) for pressure calculations. As the tank drains during a fire event, available pressure decreases. Design to the worst case — tank nearly empty at the end of the required duration.
+{% /callout %}
+
+### Pressure calculation example
+
+**Given:** Elevated tank with low water level at 95 ft above the highest sprinkler. Friction loss in the riser and underground piping = 8 psi.
+
+- Gravity pressure = 95 x 0.433 = **41.1 psi**
+- Available at sprinkler = 41.1 - 8.0 = **33.1 psi**
+
+## NFPA 22 key requirements
+
+| Requirement | NFPA 22 Summary |
+|---|---|
+| Materials | Steel (welded or bolted), fiberglass, concrete, or wood — all per listed standards |
+| Foundation | Engineered foundation per ACI or structural engineer; must support full water load |
+| Venting | Screened free vent to prevent vacuum/pressure buildup during fill/drain |
+| Overflow | Discharge to grade, sized for maximum fill rate, screened against debris |
+| Access | Interior access hatch (min 24" x 24") for inspection and maintenance |
+| Anti-vortex plate | Required at suction outlet to prevent air entrainment |
+| Level indicator | Required; visible at grade or with remote readout |
+| Seismic restraint | Required in seismic zones per ASCE 7; anchorage, flexible connections, freeboard |
+| Ladder / safety climb | Required for tanks exceeding 20 ft; per OSHA fall protection standards |
+
+{% callout %}
+NFPA 22 Section 9.3 requires that the tank suction pipe be arranged so that the full required water volume is available. Dead storage below the suction outlet does not count toward the required volume.
+{% /callout %}
+
+## Inspection and maintenance (NFPA 25)
+
+| Activity | Frequency | Key Items |
+|---|---|---|
+| Visual inspection (exterior) | Weekly | Water level, enclosure condition, heating system, valve positions |
+| Visual inspection (exterior detail) | Quarterly | Supports, foundation, coatings, cathodic protection |
+| Interior inspection | Every 5 years | Sediment, corrosion, coating condition, structural integrity |
+| Interior cleaning | As needed (per 5-year inspection) | Remove sediment, biological growth, and debris |
+| Coating / painting | Per inspection findings | Recoat when deterioration reaches 20-25% of surface area |
+| Seismic inspection | Annually | Anchor bolts, flexible couplings, freeboard |
+| Alarm / supervisory devices | Quarterly | Low water level, high/low temperature, tamper switches |
+
+{% callout type="warning" %}
+The 5-year interior inspection is critical and frequently deferred. Sediment buildup can block the suction outlet and reduce effective volume. Interior corrosion can compromise structural integrity, especially at the waterline.
+{% /callout %}
 
 ## Freeze protection
 
-In cold climates, preventing ice formation in the tank and connecting piping is essential.
+Water storage tanks in cold climates require active freeze protection per NFPA 22 Chapter 10.
 
-### Tank heating
+### Requirements
 
-- Immersion heaters or circulation heaters maintain water temperature above 40°F
-- Thermostat-controlled with alarm for heater failure
-- Insulated tanks reduce heat loss and energy costs
+- Maintain water temperature at **minimum 40 degF** at all times
+- Tank enclosure or insulation required in climates where exterior temperature drops below 40 degF
+- **Heater failure alarm** connected to the fire alarm or building management system
 
-### Piping protection
+### Heater sizing guidance
 
-- Piping between the tank and the pump room must be buried below frost line or heat-traced and insulated
-- Tank connections should include anti-vortex plates at the suction inlet
+Heater capacity depends on tank volume, surface area, insulation R-value, and minimum design temperature. General planning values:
 
----
+| Tank Volume (gal) | Typical Heater Capacity (kW) | Notes |
+|---|---|---|
+| 5,000-10,000 | 5-15 | Depends on insulation and climate |
+| 10,000-30,000 | 15-30 | |
+| 30,000-100,000 | 30-75 | Consider redundant heaters |
+| 100,000+ | 75-150+ | Multiple heaters required |
 
-## Supervision and monitoring
-
-### Level indication
-
-Tanks must have reliable water level monitoring. Low water level triggers a supervisory signal at the fire alarm control panel (FACP):
-
-- High level alarm: indicates overfill or fill valve malfunction
-- Low level alarm: indicates leak, unauthorized use, or fill system failure
-- Level transmitters: continuous level monitoring for building management systems
-
-### Temperature monitoring
-
-In heated tanks, temperature sensors with low-temperature alarms alert building personnel before freezing becomes a risk.
-
----
-
-## NFPA 22 requirements
-
-Key provisions of NFPA 22 include:
-
-- **Construction standards**: materials, welding, coating, cathodic protection
-- **Foundation design**: soil bearing capacity, settlement considerations
-- **Venting**: tanks must be vented to prevent vacuum or overpressure during filling and draining
-- **Overflow**: sized to handle maximum fill rate without pressurizing the tank
-- **Access**: ladders, platforms, and manways for inspection and maintenance
-- **Seismic**: tanks in seismic areas must meet ASCE 7 requirements for liquid-containing structures
-- **Inspection**: periodic internal and external inspection per NFPA 25
-
-{% callout type="warning" title="Internal inspection access" %}
-Every water storage tank needs periodic internal inspection to check for corrosion, sediment, and structural integrity. Ensure the tank design includes adequate access (manways) and provisions for draining and cleaning.
+{% callout %}
+Circulation pumps are recommended with immersion heaters to prevent localized hot spots and ensure uniform temperature throughout the tank. Thermostat should be set to 42-45 degF to allow margin above the 40 degF minimum.
 {% /callout %}
 
-{% figure src="/placeholder-diagram.svg" alt="Suction tank arrangement" caption="Ground-level suction tank with fire pump, showing tank connections, venting, overflow, and pump suction piping" /%}
+### Heat loss estimate
+
+**Q = U x A x dT**
+
+Where:
+- **Q** = heat loss (BTU/hr)
+- **U** = overall heat transfer coefficient (BTU/hr-ft2-degF)
+- **A** = tank surface area (ft2)
+- **dT** = temperature difference between tank water and outside air (degF)
+
+Convert BTU/hr to kW: divide by 3,412.
+
+## Tank types comparison
+
+| Feature | Ground-Level Steel | Elevated Steel | Concrete | Fiberglass |
+|---|---|---|---|---|
+| Volume range | 5,000-2,000,000+ gal | 5,000-500,000 gal | 10,000-5,000,000+ gal | 5,000-250,000 gal |
+| Pressure delivery | Requires pump | Gravity | Requires pump (usually) | Requires pump |
+| Corrosion protection | Coatings, cathodic | Coatings, cathodic | Inherently resistant | Inherently resistant |
+| Seismic performance | Anchored per AWWA D100 | Requires bracing | Good inherent mass | Lightweight, needs anchoring |
+| Typical lifespan | 30-50 years (with maintenance) | 30-50 years | 50+ years | 25-40 years |
+| Relative cost | Moderate | High | High (large sizes) | Moderate |

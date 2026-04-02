@@ -3,175 +3,194 @@ title: Plan Review and Approvals
 nextjs:
   metadata:
     title: Plan Review and Approvals
-    description: Navigating the sprinkler plan review process — AHJ submissions, common rejection reasons, acceptance testing, and as-built requirements.
+    description: AHJ plan review process — submittal requirements, acceptance testing procedures, hydrostatic test criteria, and as-built documentation.
 ---
 
-Plan review is the process by which the Authority Having Jurisdiction (AHJ) verifies that a sprinkler system design complies with the applicable codes and standards before installation begins. A smooth plan review process depends on a complete, well-organized submittal. {% .lead %}
+## Acceptance testing quick reference
+
+All tests per NFPA 13, Chapter 27. Confirm AHJ requirements before scheduling — some jurisdictions add tests or modify criteria.
+
+| Test | Requirement | Duration | Acceptance Criteria |
+| --- | --- | --- | --- |
+| Hydrostatic (wet pipe) | 200 psi or 50 psi above max working pressure, whichever is greater | 2 hours | No visible leaks, no pressure drop |
+| Hydrostatic (dry pipe) | 200 psi or 50 psi above max working pressure | 2 hours | No visible leaks, no pressure drop |
+| Air test (dry/preaction, pre-2019) | 40 psi | 24 hours | Max 1.5 psi drop |
+| Air test (dry/preaction, 2019+) | System operating pressure | 2 hours | Max 3 psi drop |
+| Main drain test | Fully open main drain, record static and residual | N/A | Compare to original flow test data |
+| Inspector's test | Open most remote inspector's test connection | N/A | Waterflow alarm activates within 90 seconds |
+| Trip test (dry valve) | Trip the dry valve | N/A | Water to inspector's test in 60 seconds |
+| Trip test (preaction) | Activate detection and trip valve | N/A | Water delivery per system design |
+| Alarm test | Activate all alarm devices | N/A | All alarms received at FACP and central station |
+| Antifreeze test | Verify solution concentration | N/A | Concentration within listed range (refractometer) |
+
+{% callout type="warning" %}
+Hydrostatic test pressure must be maintained for the full 2 hours. If the system cannot hold pressure, do not attempt to compensate by re-pumping during the test. Find and fix the leak.
+{% /callout %}
+
+**Test preparation checklist:**
+
+- [ ] All piping complete and supported
+- [ ] All heads installed (or test plugs in place with AHJ approval)
+- [ ] FDC connections capped
+- [ ] Gauges installed at riser and at test location
+- [ ] Drain path established for inspector's test
+- [ ] FACP and monitoring in place for alarm tests
+- [ ] AHJ and/or third-party inspector scheduled
 
 ---
 
-## The AHJ
+## FM Global vs. NFPA 13 — key differences
 
-The Authority Having Jurisdiction is the entity responsible for enforcing fire codes in a given jurisdiction. The AHJ may be:
+Projects with FM Global insurance often have requirements that exceed NFPA 13. Identify FM involvement early.
 
-- A city or county fire marshal's office
-- A state fire marshal
-- A third-party plan review agency contracted by the jurisdiction
-- An insurance carrier (FM Global, for example, performs its own review for insured properties)
+| Requirement | NFPA 13 | FM Global |
+| --- | --- | --- |
+| Governing documents | NFPA 13 standard | FM Data Sheets (DS 2-0, 3-26, 8-9, etc.) |
+| Design density | Per standard tables/curves | Often higher than NFPA 13, especially for storage |
+| Storage protection | Chapters 20-26 | DS 8-9 — frequently more conservative |
+| Water supply safety margin | 10 psi typical practice | May require 15-25 psi margin depending on data sheet |
+| Component approval | UL Listed | FM Approved (separate listing) |
+| Sprinkler heads | Any UL listed head meeting design | FM Approved heads required — not all UL heads are FM Approved |
+| Rack storage | In-rack per NFPA 13 tables | DS 8-9 may require additional in-rack levels |
+| Hydraulic calculations | NFPA 13 methodology | Same methodology, but higher demand points |
+| Inspection frequency | NFPA 25 | FM may require more frequent inspections |
+| Plan review | AHJ review | FM engineering review in addition to AHJ |
 
-Different AHJs have different processes, turnaround times, and areas of focus. Some jurisdictions require electronic submittals; others still want paper sets. Confirm the AHJ's specific requirements before your first submission.
-
-{% callout type="note" title="Know your reviewer" %}
-If possible, establish a working relationship with the plan reviewers in your jurisdiction. Understanding their priorities and common concerns helps you produce submittals that get approved faster.
+{% callout %}
+FM Approved is not the same as UL Listed. A head can be UL Listed but not FM Approved. Always verify component approval status when FM Global is the insurer.
 {% /callout %}
 
 ---
 
-## The submittal package
+## Common plan review rejection reasons
 
-NFPA 13 Chapter 29 specifies the minimum documentation required for plan submission. A complete package typically includes:
-
-### Plans
-
-- Floor plans showing all sprinkler piping with sizes, head locations, hanger locations, and devices
-- Riser diagrams showing valve arrangement, test connections, drains, and flow/tamper switches
-- Details: wall penetrations, seismic bracing, FDC connection, typical hanger details
-- Legend and general notes including design criteria, hazard classification, and code edition
-
-### Hydraulic calculations
-
-- Complete node-by-node calculation from the most remote sprinkler to the water supply
-- Summary sheet showing supply vs. demand comparison
-- Water supply curve (graphic or tabular)
-- Flow test data with date, location, and test authority
-
-### Supporting documents
-
-- **Cut sheets** — manufacturer data for every sprinkler head, valve, device, and listed component. Must show UL/FM listing marks.
-- **Seismic calculations** — brace loads, fastener details, and layout (where applicable)
-- **Material list** — pipe types, sizes, fittings, hanger types
-- **Owner's certificate** — if required by the AHJ, a signed statement of the system's intended use and maintenance responsibility
-
-{% figure src="/placeholder-diagram.svg" alt="Submittal package contents" caption="Components of a complete plan submittal — plans, calculations, water supply data, cut sheets, and supporting documents" /%}
+| Rejection Item | Resolution |
+| --- | --- |
+| Flow test data expired (> 12 months) | Obtain new flow test per NFPA 291 |
+| Hydraulic calc summary missing or incomplete | Include demand point, supply curve, safety margin, and node-by-node results |
+| Head spacing exceeds listing | Verify against cut sheet; add or relocate heads |
+| Obstruction rules not addressed | Apply Section 8.5.5; show obstruction analysis on plans |
+| Seismic bracing missing in required zone | Add bracing per Section 18.5; show on plans with calculations |
+| Hanger spacing exceeds table | Add hangers per Table 9.2.1 |
+| Inadequate water supply | Increase pipe sizes, reduce friction loss, or request fire pump |
+| Wrong hazard classification | Provide occupancy documentation; re-classify per Chapter 5 |
+| Missing alarm device details | Show all waterflow switches, tamper switches, and FACP connections |
+| Plans not signed/sealed | Obtain required professional signature per state licensing requirements |
+| No commodity classification for storage | Classify per NFPA 13 Section 5.6; document on plans |
+| Design area not shown on plans | Outline the hydraulically most remote area with dimensions |
 
 ---
 
-## Common rejection reasons
+## AHJ submittal requirements
 
-Plan reviewers reject submittals for both completeness and compliance issues. The most frequent reasons:
+Minimum submittal per NFPA 13 Chapter 29:
 
-### Incomplete submittals
+| Item | Required Content |
+| --- | --- |
+| Floor plans | All piping with sizes, head locations, hanger locations, brace locations, valve locations |
+| Riser diagram | Valve arrangement, trim, component identification, connection to water supply |
+| Hydraulic calculations | Complete node-by-node, with summary and supply/demand graph |
+| Water supply data | Flow test with static, residual, and flow; date and location |
+| Cut sheets | Every head, valve, and device used in the system |
+| Material list | Pipe type, fitting type, hanger type, and quantities |
+| System description | Hazard classification, design criteria, occupancy type, building construction |
+| Seismic data | Seismic design category, bracing calculations, brace locations (if applicable) |
 
-- Missing hydraulic calculations or water supply data
-- Missing cut sheets for sprinkler heads or valves
-- No seismic details in a seismic zone
-- Flow test data older than the allowed period (typically 12 months)
-- Plans not signed or sealed by the required party
+**Supplemental items that reduce review time:**
 
-### Code compliance issues
+- Cover sheet with project info, contractor license, and point of contact
+- Code edition and any local amendments referenced
+- Previous review comments with responses (for re-submittals)
+- Color-coded revisions for re-submittals
 
-- **Wrong hazard classification** — the most consequential error; everything downstream is wrong
-- **Head spacing violations** — exceeding maximum coverage or maximum distance from walls
-- **Obstruction issues** — heads too close to beams, ducts, or lights without proper clearance
-- **Insufficient water supply** — demand exceeds supply, or inadequate margin
-- **Missing coverage** — rooms or areas without sprinkler protection that should be covered
-- **Wrong code edition** — designing to a newer or older edition than the AHJ has adopted
+---
 
-{% callout type="warning" title="Check the code edition" %}
-One of the most avoidable rejection reasons is designing to the wrong edition of NFPA 13. Different editions have different requirements. Always confirm which edition the AHJ has adopted before starting design.
+## Acceptance testing procedures
+
+### Hydrostatic test — step by step
+
+1. Close the main control valve
+2. Connect test pump to the system (through FDC or test connection)
+3. Fill system completely — all air must be vented from high points
+4. Pump to test pressure (200 psi or 50 psi above max WP)
+5. Close pump valve and record gauge reading
+6. Wait 2 hours
+7. Record final gauge reading
+8. Walk all piping looking for visible leaks
+9. Pass: no visible leaks and no pressure drop on gauge
+10. Document results on test certificate
+
+{% callout type="warning" %}
+Temperature changes during testing affect pressure readings. A 10F temperature increase can raise pressure by approximately 10 psi in a closed system. Account for ambient conditions when evaluating results.
+{% /callout %}
+
+### Main drain test
+
+1. Record static pressure at the system gauge
+2. Fully open the main drain valve
+3. Wait for pressure to stabilize (minimum 30 seconds)
+4. Record residual pressure
+5. Close drain valve
+6. Compare static and residual to the original flow test data
+7. A significant drop from original values indicates a water supply problem
+
+### Inspector's test (wet systems)
+
+1. Open the inspector's test connection at the hydraulically most remote point
+2. Start a timer when the valve opens
+3. Waterflow alarm must activate within 90 seconds
+4. Verify alarm signal is received at the FACP
+5. Verify alarm signal is transmitted to the central monitoring station
+6. Close the test connection
+7. Verify the system resets properly
+
+---
+
+## As-built documentation requirements
+
+Per NFPA 13, as-built drawings must reflect actual installed conditions. This is a code requirement, not optional.
+
+**As-built drawings must show:**
+
+- [ ] All installed piping with actual sizes (including any field changes)
+- [ ] All sprinkler head locations as installed
+- [ ] All valve locations with identification numbers
+- [ ] All hanger and brace locations as installed
+- [ ] Any deviations from the approved plans — clearly marked
+- [ ] Actual pipe lengths if they differ from approved plans
+- [ ] Any field-routed piping not shown on original plans
+
+**As-built documentation package:**
+
+| Document | Recipient |
+| --- | --- |
+| As-built drawings | Building owner and AHJ |
+| Hydraulic calculations (updated if design changed) | Building owner and AHJ |
+| Test certificates (hydrostatic, alarm, drain) | Building owner and AHJ |
+| Contractor's material and test certificate (NFPA 13 form) | Building owner and AHJ |
+| Sprinkler head and device cut sheets | Building owner |
+| Spare head cabinet inventory | Building owner |
+| Operating instructions for valves and devices | Building owner |
+
+{% callout %}
+The spare head cabinet must contain a minimum of 6 spare heads for systems with under 300 heads, 12 for 300-1000, and 24 for over 1000 heads. Include a sprinkler wrench for each head type. This is an NFPA 13 requirement, not a suggestion.
 {% /callout %}
 
 ---
 
-## Responding to review comments
+## Inspection, testing, and maintenance handoff
 
-When the AHJ returns comments, a professional and organized response accelerates approval:
+At project closeout, the installing contractor should provide the building owner with:
 
-### Best practices
+| Item | Purpose |
+| --- | --- |
+| NFPA 25 summary | Inspection, testing, and maintenance schedule for all system components |
+| Valve location chart | Quick reference for emergency shutdowns |
+| Spare head cabinet location | So maintenance staff can find it |
+| Fire pump operation manual | If applicable — includes test procedures |
+| Monitoring company contact info | Central station and local alarm company |
+| Contractor contact info | For service, repairs, and warranty issues |
 
-- Respond to every comment — even if you disagree, explain your rationale with code references
-- Use a numbered response matrix that corresponds to the reviewer's comment numbers
-- Include revised plan sheets that clearly show the changes (revision clouds, delta marks)
-- Highlight changes on the hydraulic calculations if the calcs were affected
-- Resubmit as a complete package, not piecemeal corrections
-
-### Disagreements with the reviewer
-
-If you believe the reviewer's comment is incorrect:
-- Cite the specific NFPA 13 section that supports your position
-- Reference the NFPA 13 Handbook commentary if it clarifies the intent
-- Be professional — the reviewer has the authority, but they are also open to well-supported arguments
-- If the disagreement cannot be resolved, request a formal interpretation from NFPA or escalate through the AHJ's appeals process
-
----
-
-## Insurance carrier review
-
-On many commercial and industrial projects, the property insurer performs a parallel review. The most common insurer conducting fire sprinkler reviews is FM Global.
-
-### FM Global
-
-FM Global applies their own standards (FM Global Data Sheets) which often exceed NFPA 13 requirements:
-- Stricter storage protection criteria
-- Higher design densities for certain hazards
-- Additional requirements for water supplies and fire pumps
-- Specific equipment and component approvals (FM Approved vs. UL Listed)
-
-Compliance with both the AHJ and the insurer's requirements is necessary. Where they conflict, the more restrictive requirement governs.
-
----
-
-## Acceptance testing
-
-After installation, the system must pass acceptance testing before the AHJ grants final approval. Per NFPA 13 Chapter 30:
-
-### Hydrostatic test
-
-- Pressurize the system to **200 psi** (or 50 psi above maximum working pressure, whichever is greater)
-- Maintain for **2 hours**
-- No visible leaks, no pressure drop beyond what can be attributed to temperature change
-
-### Flush test
-
-- Flush all underground and aboveground piping to remove construction debris
-- Document flow rates and water clarity
-
-### Trip test (dry, preaction, deluge systems)
-
-- Activate the system and verify the valve opens correctly
-- Measure trip time and water delivery time
-- Verify alarm devices operate
-
-### Alarm test
-
-- Test all flow switches, tamper switches, and supervisory devices
-- Verify signals reach the fire alarm control panel and/or central monitoring station
-- Test the water motor gong (if installed)
-
-### Drain test
-
-- Open the main drain and record the pressure readings
-- Compare to the expected pressure from the water supply
-- This serves as a baseline for future NFPA 25 annual drain tests
-
-{% figure src="/placeholder-diagram.svg" alt="Acceptance testing checklist" caption="Key acceptance tests required before AHJ sign-off — hydrostatic, flush, alarm, and drain tests" /%}
-
----
-
-## As-built drawings
-
-After the system is installed and accepted, the contractor must provide as-built (record) drawings that show the system as it was actually installed, including all field changes from the original design.
-
-### Requirements
-
-NFPA 13 requires that as-built drawings:
-- Accurately reflect the installed conditions
-- Include all pipe sizes, head locations, valve locations, and device locations
-- Note any deviations from the approved plans
-- Be provided to the building owner and, in many jurisdictions, to the AHJ
-
-As-built drawings are essential for future maintenance, renovations, and NFPA 25 inspections. A system without accurate record drawings is difficult to inspect and dangerous to modify.
-
-{% callout type="note" title="As-builts start on day one" %}
-Do not wait until the end of the project to create as-built drawings. Mark up changes on the working drawings as they happen in the field. Trying to remember what changed weeks or months later produces inaccurate records.
+{% callout type="warning" %}
+Many building owners do not understand their NFPA 25 obligations. A brief handoff meeting explaining the inspection schedule prevents system neglect and potential liability for the installing contractor.
 {% /callout %}

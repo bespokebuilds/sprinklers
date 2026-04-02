@@ -31,6 +31,12 @@ export const navigationTabs = [
           { title: 'Plan Review and Approvals', href: '/docs/plan-review' },
         ],
       },
+      {
+        title: 'Reference',
+        links: [
+          { title: 'NFPA 13 Edition Changes', href: '/docs/edition-changes' },
+        ],
+      },
     ],
   },
   {

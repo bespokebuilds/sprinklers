@@ -3,165 +3,258 @@ title: Design Area and Density
 nextjs:
   metadata:
     title: Design Area and Density
-    description: Understanding sprinkler design area, density, density/area curves, hose stream allowances, and duration requirements per NFPA 13.
+    description: "Sprinkler coverage areas, spacing requirements, hanger spacing, ESFR criteria, and design area calculations per NFPA 13."
 ---
 
-Design area and density are the two parameters that define how much water a sprinkler system must deliver. Together with the hose stream allowance and duration, they establish the total water supply requirement for the system. {% .lead %}
-
----
-
-## Density
-
-Density is the rate of water application, expressed in gallons per minute per square foot (gpm/sq ft). It represents how much water the sprinkler system must deliver over each square foot of the design area.
-
-Higher-hazard occupancies require higher densities because their contents produce fires that release more heat and spread faster. The density must be sufficient to control the fire before it overwhelms the sprinkler system.
-
-### Common design densities
-
-- Light Hazard: 0.10 gpm/sq ft
-- Ordinary Hazard Group 1: 0.15 gpm/sq ft (most common selection)
-- Ordinary Hazard Group 2: 0.20 gpm/sq ft (most common selection)
-- Extra Hazard Group 1: 0.30 gpm/sq ft
-- Extra Hazard Group 2: 0.40 gpm/sq ft
-
-These are typical values. The actual density selected depends on where the designer picks a point on the density/area curves.
+Coverage areas, spacing limits, hanger spacing, ESFR criteria, design area sizing, and reduction methods from NFPA 13. All section references are to the 2022 edition unless noted. {% .lead %}
 
 ---
 
-## Density/area curves
+## Maximum coverage area per sprinkler
 
-NFPA 13 Figure 19.3.3.1 presents the density/area curves — a set of curves that allow the designer to trade off between density and design area. Each curve represents a hazard classification.
+Per NFPA 13 Section 10.2.3 (standard spray sprinklers). Coverage = S x L where S = distance between sprinklers on a branch line and L = distance between branch lines.
 
-### How to read the curves
+| Hazard Classification | Max Coverage (sq ft) | Max Spacing (ft) | Min Spacing (ft) |
+| --- | --- | --- | --- |
+| Light Hazard | 225 | 15 | 6 |
+| Ordinary Hazard Group 1 | 130 | 15 | 6 |
+| Ordinary Hazard Group 2 | 130 | 15 | 6 |
+| Extra Hazard (density < 0.25 gpm/sq ft) | 130 | 15 | 6 |
+| Extra Hazard (density >= 0.25 gpm/sq ft) | 100 | 12 | 6 |
+| High-Piled Storage (density/area) | 100 | 12 | 6 |
+| High-Piled Storage (ESFR) | 100 | 12 | 8 (typical listing) |
 
-The horizontal axis is the design area in square feet. The vertical axis is the density in gpm/sq ft. For each hazard group, the curve shows the minimum acceptable combinations of density and area.
-
-- Moving left on the curve (smaller area) requires a higher density
-- Moving right on the curve (larger area) allows a lower density
-- Any combination of density and area on or above the curve is acceptable
-
-### Selecting a design point
-
-The designer selects a point on the curve that balances system cost against water supply availability:
-
-- **Higher density, smaller area** — requires higher pressures but less total flow; often favorable when the water supply has good pressure but limited flow
-- **Lower density, larger area** — requires more total flow but lower pressures; favorable when the supply has ample flow but limited pressure
-
-{% figure src="/placeholder-diagram.svg" alt="NFPA 13 density/area curves" caption="Density/area curves showing the relationship between design density and design area for each hazard classification" /%}
-
-{% callout type="note" title="The most common shortcut" %}
-Many designers default to the flat portion of the curve (e.g., 0.15/1,500 for OH1) without checking whether a different point would work better with the available water supply. Running the numbers at two or three points on the curve can save the project a fire pump or a tank.
+{% callout type="note" %}
+Extended coverage (EC) sprinklers may protect up to 400 sq ft per head, but coverage limits are set by the individual sprinkler listing -- not by the tables above. Always verify the listing sheet for EC and ESFR heads.
 {% /callout %}
 
----
+### Residential sprinkler coverage (NFPA 13, Section 10.2.4)
 
-## Design area
-
-The design area (remote area) is the area of floor that the sprinkler system must protect simultaneously. It represents the assumed maximum fire size that the sprinkler system is designed to control.
-
-### Standard design areas
-
-- Light Hazard: 1,500 sq ft
-- Ordinary Hazard: 1,500 sq ft (can increase with density trade-off)
-- Extra Hazard: 2,500 sq ft (can increase with density trade-off)
-
-### Remote area shape requirements
-
-Per NFPA 13 Section 28.2.4:
-
-- The remote area must be rectangular
-- The long dimension must be parallel to the branch lines
-- The length of the long dimension must be at least **1.2 x sqrt(design area)**
-
-For a 1,500 sq ft design area: minimum long dimension = 1.2 x sqrt(1,500) = 1.2 x 38.7 = **46.5 ft**
-
-### Number of sprinklers
-
-The number of sprinklers in the remote area equals:
-
-**N = Design area / Coverage area per sprinkler** (round up)
+| Installation Type | Max Coverage (sq ft) | Max Spacing (ft) |
+| --- | --- | --- |
+| Standard residential spray | 196 | 14 |
+| Residential sidewall | 196 | 14 (along wall), 12 (throw) |
 
 ---
 
-## Quick response sprinkler reductions
+## Minimum distance from walls
 
-Quick response (QR) sprinklers activate faster than standard response heads, controlling fires at an earlier stage. NFPA 13 allows design area reductions when QR heads are used:
+Per NFPA 13 Section 10.2.3.3:
 
-- Light Hazard with QR heads: design area may be reduced to 1,125 sq ft (25% reduction)
-- Ordinary Hazard with QR heads in certain occupancies: density/area curve shifts apply
+| Condition | Minimum Distance from Wall |
+| --- | --- |
+| Standard spray sprinklers | 4 inches from wall/obstruction |
+| Maximum distance from wall | 1/2 of the allowable distance between sprinklers (typically 7.5 ft for 15 ft max spacing) |
+| ESFR | Per listing; typically 4 in minimum |
 
-This reduction reflects the demonstrated improvement in fire control performance from faster head activation.
+---
 
-{% callout type="warning" title="QR reductions have conditions" %}
-Quick response reductions only apply when specific conditions are met — ceiling height limits, head spacing limits, and minimum pressure requirements. Verify all conditions in NFPA 13 before applying the reduction.
+## Hanger and support spacing
+
+Per NFPA 13 Section 10.6.
+
+### Maximum hanger spacing by pipe size
+
+| Pipe Size | Max Hanger Spacing |
+| --- | --- |
+| 1" | 12 ft |
+| 1-1/4" | 12 ft |
+| 1-1/2" | 12 ft |
+| 2" | 12 ft |
+| 2-1/2" | 12 ft |
+| 3" | 15 ft |
+| 3-1/2" | 15 ft |
+| 4" | 15 ft |
+| 6" | 15 ft |
+| 8" | 15 ft |
+
+### Maximum unsupported arm-over lengths
+
+These apply to the end sprinkler on a branch line where the pipe extends past the last hanger.
+
+| Pipe Size | Max Unsupported Length |
+| --- | --- |
+| 1" | 36 in (3 ft) |
+| 1-1/4" | 48 in (4 ft) |
+| 1-1/2" | 54 in (4.5 ft) |
+| 2" | 60 in (5 ft) |
+| 2-1/2" and larger | 60 in (5 ft) |
+
+{% callout type="warning" %}
+CPVC pipe requires hangers at **every joint** per the manufacturer listing (typically 5-6 ft max spacing for 1" CPVC). Steel hanger spacing rules do not apply to CPVC -- always follow the CPVC system listing.
 {% /callout %}
 
----
+### Trapeze hanger requirements
 
-## Hose stream allowance
-
-In addition to the sprinkler system demand, the water supply must provide water for fire department hose streams used during manual firefighting operations.
-
-### Allowances by hazard
-
-- **Light Hazard**: 100 gpm (inside hose streams)
-- **Ordinary Hazard**: 250 gpm
-- **Extra Hazard**: 500 gpm (check specific requirements — some scenarios require more)
-
-### How hose streams are applied
-
-The hose stream allowance is added to the sprinkler demand **at the base of the riser**. It does not travel through the sprinkler piping and therefore does not add friction loss to the calculation. It is simply additional flow the water supply must deliver at the BOR pressure.
+| Pipe Size | Requires Trapeze? |
+| --- | --- |
+| 4" and smaller | Optional; can use individual ring or clevis |
+| 6" and larger | Trapeze recommended; check structural loading |
+| Mains/risers 4" and larger | Riser clamp or U-bolt at each floor level |
 
 ---
 
-## Duration
+## ESFR design criteria
 
-The water supply must sustain the total demand (sprinkler + hose) for a minimum time:
+ESFR systems do not use density/area. They require a fixed number of sprinklers (typically 12) operating at or above a minimum pressure. All values below are for ceiling-only protection without in-rack sprinklers.
 
-- **Light Hazard**: 30 minutes
-- **Ordinary Hazard**: 60 minutes
-- **Extra Hazard**: 90-120 minutes
-- **Storage**: 60-120 minutes depending on commodity and height
+### ESFR K-factor and pressure requirements
 
-Duration is primarily relevant for water storage tank sizing. If the system draws from a municipal supply with continuous replenishment, duration is typically satisfied automatically (the utility does not "run out"). For tank-fed systems, the required volume equals the total demand rate multiplied by the duration.
+| K-Factor | Min Pressure (psi) | Design Sprinklers | Max Ceiling Height (ft) | Max Storage Height (ft) | Notes |
+| --- | --- | --- | --- | --- | --- |
+| K14.0 | 75 | 12 | 35 | 25 | Limited new listings post-2013 |
+| K16.8 | 52 | 12 | 35-40 | 30 | Lower pressure option for moderate heights |
+| K22.4 | 75 | 12 | 40 | 35 | Higher commodities, taller storage |
+| K25.2 | 60 | 12 | 40-48 | 40 | Most common modern ESFR |
+| K28.0 | 50 | 12 | 45-48 | 40 | Lowest pressure per sprinkler; newest listings |
 
-{% figure src="/placeholder-diagram.svg" alt="Design criteria summary table" caption="Summary of design density, area, hose stream, and duration requirements by hazard classification" /%}
+{% callout type="note" %}
+ESFR design sprinkler counts assume 4 sprinklers on each of 3 branch lines in the remote area. The actual minimum pressure and number of sprinklers are set by the individual product listing -- verify against the manufacturer data sheet for the specific commodity class, storage height, and ceiling height.
+{% /callout %}
+
+### ESFR obstruction rules
+
+ESFR sprinklers are extremely sensitive to obstructions. Key rules per NFPA 13 Section 10.2.6.3:
+
+| Obstruction Type | Requirement |
+| --- | --- |
+| Continuous obstruction (beam, duct) > 4 ft wide | Additional line of sprinklers below the obstruction |
+| Open bar joist/truss (members > 1 in wide) | Sprinklers must be installed within the truss space |
+| Fluorescent light fixtures | Maintain minimum 24 in horizontal clearance |
+| Any obstruction within 24 in of deflector | Not permitted -- relocate sprinkler or obstruction |
+
+---
+
+## Design area calculation
+
+### Remote area shape
+
+Per NFPA 13 Section 19.2.3.1.4, the design area must be:
+- Rectangular
+- Longest dimension parallel to the branch lines
+- Width (along cross main) must include at least **1.2 x sqrt(design area)** feet of branch lines
+
+**Quick reference for minimum remote area width:**
+
+| Design Area (sq ft) | Min Width Along Cross Main (ft) | Typical Branch Lines Included |
+| --- | --- | --- |
+| 1,500 | 46.5 | 4-5 lines at 10-12 ft spacing |
+| 2,500 | 60.0 | 5-6 lines at 10-12 ft spacing |
+| 3,000 | 65.7 | 6-7 lines at 10-12 ft spacing |
+
+### Number of sprinklers in remote area
+
+N = design area / coverage area per sprinkler (round up)
+
+| Coverage Area | Design Area 1,500 sf | Design Area 2,500 sf |
+| --- | --- | --- |
+| 100 sq ft | 15 sprinklers | 25 sprinklers |
+| 130 sq ft | 12 sprinklers | 20 sprinklers |
+| 225 sq ft | 7 sprinklers | 12 sprinklers |
+
+---
+
+## Design area reductions
+
+### Quick-response sprinkler reduction
+
+Per NFPA 13 Section 19.2.3.2.2, quick-response sprinklers in wet pipe systems allow the following design area reductions:
+
+| Hazard | Reduction |
+| --- | --- |
+| Light Hazard | Reduce design area by 40% (1,500 -> 900 sq ft) |
+| Ordinary Hazard Group 1 | Reduce design area by 25% (1,500 -> 1,125 sq ft) |
+| Ordinary Hazard Group 2 | Reduce design area by 25% (1,500 -> 1,125 sq ft) |
+| Extra Hazard | No reduction permitted |
+| Storage | No reduction permitted (use specific storage criteria) |
+
+{% callout type="warning" %}
+QR reductions apply ONLY to wet pipe systems. Dry, preaction, and deluge systems do not qualify for QR reductions. Additionally, QR sprinklers in systems with non-sprinkler connections exceeding certain thresholds may not qualify -- see Section 19.2.3.2.2.
+{% /callout %}
+
+### Dry pipe system increase
+
+Per NFPA 13 Section 19.2.3.1.5, design areas for dry pipe and preaction systems must be increased by **30%** without exception for Light, Ordinary, and Extra Hazard occupancies.
+
+| Hazard | Wet System Area | Dry/Preaction System Area |
+| --- | --- | --- |
+| Light Hazard | 1,500 sq ft | 1,950 sq ft |
+| OH Group 1 | 1,500 sq ft | 1,950 sq ft |
+| OH Group 2 | 1,500 sq ft | 1,950 sq ft |
+| EH Group 1 | 2,500 sq ft | 3,250 sq ft |
+| EH Group 2 | 2,500 sq ft | 3,250 sq ft |
+
+{% callout type="note" %}
+The 30% dry pipe increase and QR reduction can both apply. Example: OH1, dry system, QR heads = 1,500 x 0.75 x 1.30 = 1,462.5 sq ft. Apply QR reduction first, then dry increase.
+{% /callout %}
 
 ---
 
 ## Room design method
 
-NFPA 13 Section 19.3.3.2 allows an alternative approach for small rooms: the room design method. Instead of using the remote area from the density/area curves, the designer calculates the demand for the single most demanding room.
+Per NFPA 13 Section 19.2.3.3, the room design method can be used when:
 
-### When to use it
+1. The room is enclosed with walls having a fire-resistance rating of at least **1 hour** (or per the applicable building code)
+2. The room does not exceed the design area in total floor area
+3. The system is hydraulically designed to supply all sprinklers in the room simultaneously
 
-The room design method is applicable when:
+| Condition | Requirement |
+| --- | --- |
+| Max room size for room design | Must not exceed the design area for the hazard classification |
+| All sprinklers in room must operate | Hydraulic calc must flow every sprinkler in the room |
+| Wall openings | Must have listed fire doors or be otherwise protected |
 
-- The building is divided into rooms by walls with limited openings
-- Individual rooms are small enough that a standard remote area would span multiple rooms
-- The room with the highest demand can be clearly identified
-
-This method can produce a smaller system demand than the standard remote area approach, particularly in buildings with many small, enclosed rooms.
+This method is commonly used for small mechanical rooms, electrical rooms, and storage closets where the room itself is smaller than the standard remote area.
 
 ---
 
-## ESFR and control mode specific application (CMSA)
+## Deflector-to-ceiling distance
 
-For storage occupancies, the density/area approach is replaced by specific head-by-head design criteria:
+Per NFPA 13 Section 10.2.5.
 
-### ESFR (Early Suppression Fast Response)
+| Sprinkler Type | Min Distance | Max Distance |
+| --- | --- | --- |
+| Standard spray pendent/upright | 1 in | 12 in |
+| Quick-response pendent/upright | 1 in | 12 in |
+| ESFR pendent | Per listing | Per listing (typically 6-12 in) |
+| Sidewall | 4 in | 6 in (below ceiling), per listing |
+| Concealed | Per listing | Per listing |
 
-ESFR heads are designed to suppress (not just control) storage fires without in-rack sprinklers. They are ceiling-only and require:
-
-- Specific minimum operating pressures (varies by K-factor and storage height)
-- Number of heads in the design (typically 12 or more)
-- Maximum ceiling height and storage height limits
-- No obstructions in the spray pattern
-
-### CMSA (Control Mode Specific Application)
-
-CMSA heads are designed for specific storage arrangements. Like ESFR, they have prescriptive design criteria — a specific number of heads at a specific minimum pressure rather than a density/area calculation.
-
-{% callout type="note" title="Storage design is its own specialty" %}
-NFPA 13 Chapters 20-26 cover storage in extensive detail. Storage design is significantly more complex than standard occupancy design and is a major focus of NICET Level III and IV exams.
+{% callout type="note" %}
+For sloped ceilings exceeding a 2-in-12 pitch, sprinklers must be positioned within 3 ft of the peak measured along the slope, or additional sprinklers must be provided at the peak per Section 10.2.5.3.
 {% /callout %}
+
+---
+
+## Obstruction rules summary
+
+### Distance below obstruction for standard spray
+
+Per NFPA 13 Table 10.2.6.2.1:
+
+| Distance from Sprinkler to Side of Obstruction | Max Allowable Distance Below Obstruction |
+| --- | --- |
+| Less than 1 ft | 0 in (not permitted) |
+| 1 ft to less than 2 ft | 2-1/2 in |
+| 2 ft to less than 3 ft | 3-1/2 in |
+| 3 ft to less than 4 ft | 5 in |
+| 4 ft to less than 5 ft | 9-1/2 in |
+| 5 ft or more | No limit |
+
+---
+
+## Reference: NFPA 13 sections (2022 edition)
+
+| Topic | Section |
+| --- | --- |
+| Coverage areas and spacing | 10.2.3 |
+| Residential sprinkler spacing | 10.2.4 |
+| Deflector position | 10.2.5 |
+| Obstructions | 10.2.6 |
+| Hangers and supports | 10.6 |
+| Design area shape | 19.2.3.1.4 |
+| QR sprinkler reduction | 19.2.3.2.2 |
+| Dry pipe increase | 19.2.3.1.5 |
+| Room design method | 19.2.3.3 |
+| ESFR criteria | Chapter 22 (rack storage), Chapter 20 (palletized) |
+| Single-point density | 19.3 |

@@ -3,161 +3,138 @@ title: Coordination with Other Trades
 nextjs:
   metadata:
     title: Coordination with Other Trades
-    description: MEP coordination for fire sprinkler systems — BIM workflows, trade priority, conflict resolution, and field coordination practices.
----
-
-Fire sprinkler piping shares ceiling space with HVAC ductwork, electrical conduit, plumbing, cable trays, and structural elements. Coordination is the process of making all of these systems fit together without conflicts. Poor coordination leads to costly field changes, project delays, and obstruction issues. {% .lead %}
-
----
-
-## Why coordination matters
-
-The ceiling space above a finished ceiling or below a roof deck is a shared resource. Every mechanical, electrical, and plumbing (MEP) system competes for the same vertical and horizontal space. Without proactive coordination:
-
-- Pipes get installed in the path of ductwork
-- Sprinkler heads end up below obstructions
-- Field changes drive up labor costs and delay the schedule
-- Change orders erode project margins
-
-Good coordination catches conflicts on the screen instead of in the field, where fixes cost 5-10 times more.
-
-{% callout type="note" title="Early coordination saves the most money" %}
-The earlier coordination begins in the project timeline, the less it costs. Changes on paper are nearly free; changes during rough-in cost labor and materials; changes after ceilings are installed require demolition and rework.
-{% /callout %}
-
----
-
-## BIM coordination
-
-Building Information Modeling (BIM) has become the standard coordination method on mid-to-large commercial and institutional projects.
-
-### The coordination model
-
-Each trade creates a 3D model of their system:
-- **Structural** — steel, concrete, openings
-- **Mechanical** — ductwork, equipment, piping
-- **Electrical** — conduit, cable tray, panels, large junction boxes
-- **Plumbing** — waste/vent piping, domestic water
-- **Fire protection** — sprinkler mains, branch lines, heads, hangers, braces
-
-These models are combined into a coordination (federated) model and checked for clashes using software like Navisworks, BIM 360 Glue, or Solibri.
-
-### Clash detection
-
-Clash detection software identifies every location where two or more systems occupy the same space. Clashes are categorized as:
-
-- **Hard clash** — physical interference, two objects in the same space
-- **Soft clash** — clearance violation, objects too close to maintain required access or clearance (e.g., sprinkler head within obstruction distance of a duct)
-- **Workflow clash** — construction sequence issues (e.g., cannot install pipe after duct is in place)
-
-{% figure src="/placeholder-diagram.svg" alt="BIM coordination model" caption="Combined coordination model showing structural, mechanical, electrical, plumbing, and fire protection systems in shared ceiling space" /%}
-
-### Coordination meetings
-
-Regular coordination meetings (typically weekly or bi-weekly) bring all trades together to resolve clashes:
-
-1. Review new clashes from the latest model updates
-2. Assign ownership — who moves their system to resolve each clash?
-3. Follow routing priority rules (see below)
-4. Update models to reflect resolutions
-5. Verify resolutions in the next round of clash detection
-
+    description: MEP coordination reference — routing priority, clearance requirements, BIM standards, and conflict resolution procedures.
 ---
 
 ## Routing priority
 
-When two systems conflict, a general priority hierarchy determines which system moves:
+When systems compete for ceiling space, the system that is hardest to reroute gets priority. This table reflects standard MEP coordination practice.
 
-1. **Gravity-dependent systems** — plumbing waste and storm drain piping must maintain slope and cannot easily be rerouted. These generally have highest priority.
-2. **Large ductwork** — main trunk ducts are difficult and expensive to reroute. They typically hold position.
-3. **Sprinkler mains and cross mains** — fire protection mains require specific clearances and routing, but have some flexibility.
-4. **Electrical conduit and cable tray** — generally the most flexible and easiest to reroute.
-5. **Small branch piping** — sprinkler branch lines and small plumbing can usually be adjusted with minor layout changes.
+| Priority | System | Reason |
+| --- | --- | --- |
+| 1 | Gravity drainage (plumbing waste, storm) | Cannot be rerouted — requires continuous slope |
+| 2 | Large ductwork (trunk ducts) | Expensive and difficult to reroute; large cross-section |
+| 3 | Sprinkler mains and cross mains | Code clearances required; structural attachment constraints |
+| 4 | Plumbing pressure pipe | Flexible routing, but limited by fixture connections |
+| 5 | Electrical conduit and cable tray | Most flexible routing among large systems |
+| 6 | Small branch piping (all trades) | Easily adjusted in the field |
 
-{% callout type="warning" title="Routing priority is a guideline, not a contract" %}
-Routing priority is a practical convention, not an NFPA requirement. On every project, there will be exceptions. The goal is to minimize total rework cost — sometimes moving a sprinkler main is cheaper than rerouting a large duct.
+{% callout %}
+Sprinkler branch lines are Priority 6 (small branch piping). Mains and cross mains are Priority 3. Do not confuse the two during coordination — branch lines should yield to ductwork, not the other way around.
 {% /callout %}
 
 ---
 
-## Key coordination issues for fire protection
+## Typical ceiling space allocation
 
-### Clearance from obstructions
+From the deck down, systems should be layered in this order. Deviations require coordination sign-off.
 
-The primary coordination concern for sprinkler systems is maintaining required clearance between sprinkler heads and obstructions (see [Obstructions to Spray](/docs/obstructions)). During coordination:
+| Layer | System | Typical Depth |
+| --- | --- | --- |
+| 1 | Structure (bar joists, beams, deck) | Varies |
+| 2 | Sprinkler mains and cross mains | 4"-8" below bottom of structure |
+| 3 | Large ductwork (trunk and branch) | 12"-24" depending on tonnage |
+| 4 | Electrical conduit and cable tray | 4"-6" |
+| 5 | Sprinkler branch lines | Between or below ductwork |
+| 6 | Sprinkler heads | At or below finished ceiling plane |
 
-- Flag any duct, conduit, or equipment that falls within the obstruction zone of a sprinkler head
-- Verify that moving sprinkler pipe to avoid a duct clash does not create a new obstruction issue at the heads
-- Check that relocated heads still meet spacing and coverage requirements
+{% callout type="warning" %}
+Maintain minimum 1" clearance between sprinkler pipe and any other system. Where pipe crosses above ductwork, verify the deflector-to-ceiling distance is still met at the head location.
+{% /callout %}
 
-### Ceiling space allocation
+**Critical sprinkler clearance requirements:**
 
-On tight projects, the available ceiling depth is limited. Typical vertical layering from the deck down:
-
-1. Structure (bar joists, beams, deck)
-2. Sprinkler mains (hung immediately below structure)
-3. Large ductwork
-4. Electrical conduit and cable tray
-5. Sprinkler branch lines (between or below ducts)
-6. Sprinkler heads (projecting below the ceiling or flush with ceiling tiles)
-
-This layering varies by project, but the general principle is that sprinkler mains route above large ducts, and branch lines weave between or below ducts to position heads correctly.
-
-### Penetrations
-
-Where sprinkler piping passes through rated walls, floors, or other fire barriers:
-- Coordinate the penetration location with the structural and architectural teams
-- Provide adequate clearance for firestopping (especially in seismic zones where 2-inch clearance is required)
-- Confirm that the penetration location does not conflict with structural reinforcement
+| Clearance | Requirement | Reference |
+| --- | --- | --- |
+| Deflector to ceiling | 1" to 12" (standard spray) | NFPA 13 Section 8.6.2 |
+| Head to obstruction | Three-times rule or Section 8.5.5 tables | NFPA 13 Section 8.5 |
+| Pipe to structure | Per hanger attachment — no direct contact with dissimilar metals | NFPA 13 Section 9.2 |
+| Branch line to duct | Min 1" clearance | Good practice |
+| Head to diffuser | 24" minimum to avoid cold air affecting activation | NFPA 13 Section 8.6.5 |
 
 ---
 
-## Shop drawing review
+## BIM LOD requirements for fire protection
 
-Before fabrication, each trade reviews the other trades' shop drawings to catch conflicts that the BIM model may have missed or that arose from changes after the coordination model was finalized.
+| LOD | Phase | What Is Modeled | Accuracy |
+| --- | --- | --- | --- |
+| 200 | Schematic design | Approximate pipe routing, riser locations | +/- 24" |
+| 300 | Design development | Accurate pipe sizes, head locations, main routing | +/- 6" |
+| 350 | Coordination | Hangers, braces, clearances, fittings | +/- 1" |
+| 400 | Fabrication | Cut lengths, piece marks, thread engagement | Exact |
 
-### What to look for
+**LOD 350 is the coordination standard.** Most clash detection happens at this level. Sprinkler models at LOD 300 will not catch hanger and brace conflicts.
 
-When reviewing other trades' shop drawings:
-- Ductwork or pipe that routes through planned sprinkler pipe paths
-- Equipment installed in locations that create sprinkler obstruction issues
-- Structural changes (added beams, relocated columns) that affect hanger attachment points
-- Ceiling height changes that affect head positioning
+**Minimum BIM content at LOD 350:**
 
-### RFIs
+- All pipe (mains, cross mains, branch lines) with correct OD
+- All fittings (tees, elbows, reducers, couplings)
+- All heads with correct deflector position
+- All hangers with rod length and attachment point
+- All seismic braces with correct angle and attachment
+- Valve assemblies with operator clearance envelopes
 
-When a conflict cannot be resolved through trade-to-trade coordination, a Request for Information (RFI) is submitted to the general contractor or design team. RFIs should:
-- Clearly describe the conflict with plan references
-- Propose a resolution (or two options)
-- Include a sketch or markup showing the issue and proposed fix
-- Flag any cost or schedule impact
+{% figure src="/placeholder-diagram.svg" alt="BIM coordination model showing sprinkler pipe routing through ductwork and structural elements" caption="LOD 350 coordination model — sprinkler mains above ductwork, branch lines threaded between mechanical and electrical systems." /%}
 
-{% figure src="/placeholder-diagram.svg" alt="RFI workflow" caption="Typical RFI process from conflict identification through resolution and incorporation into revised shop drawings" /%}
+---
+
+## Clash detection and resolution
+
+| Clash Type | Definition | Typical Owner | Resolution |
+| --- | --- | --- | --- |
+| Hard clash | Physical intersection of two systems | Lower-priority system moves | Adjust routing in BIM, rerun calcs if pipe lengths change |
+| Soft clash | Systems within minimum clearance tolerance | Both trades review | Adjust one or both systems to meet clearance |
+| Workflow clash | Two systems need to be installed in the same sequence | GC / project manager | Adjust installation schedule or access plan |
+| Code clash | Clearance or coverage requirement violated | System with the code requirement | Redesign to meet code; cannot be waived |
+
+**Resolution workflow:**
+
+1. Automated clash detection (Navisworks, BIM 360, Revizto, etc.)
+2. Filter and categorize — remove duplicates, group by area
+3. Assign to responsible trade
+4. Resolve in BIM model within coordination cycle (typically weekly)
+5. Re-run clash detection to verify resolution
+6. Document in clash report — include resolution description
+
+{% callout %}
+Sprinkler clashes that affect head coverage or deflector distance are code clashes, not negotiable soft clashes. The sprinkler head location and clearance take precedence over aesthetics or other trade preferences.
+{% /callout %}
 
 ---
 
 ## Field coordination
 
-Even with excellent BIM coordination, field conditions differ from the model. Effective field coordination practices include:
+BIM coordination catches most conflicts, but field conditions always introduce new ones.
 
-### Pre-installation walkthrough
+**Common field conflicts and responses:**
 
-Before starting rough-in, walk the actual space and compare it to the coordination model:
-- Are beams, columns, and openings where the model shows them?
-- Has another trade already installed something that conflicts?
-- Are there unexpected conditions (existing piping, structural modifications)?
+| Conflict | Response |
+| --- | --- |
+| Steel differs from structural model | Re-measure, update model, adjust hangers and braces |
+| Duct installed in sprinkler main path | Evaluate reroute vs. duct modification — escalate per priority table |
+| Ceiling height changed | Verify deflector distance; may require different head type or arm-over |
+| Penetration not cored/sleeved | Coordinate with GC for coring schedule before pipe installation |
+| Hanger point conflicts with deck fluting | Use beam clamps or alternative attachment per NFPA 13 Section 9.2 |
+| Light fixture blocks spray pattern | Relocate head or fixture; re-verify coverage |
 
-### Real-time resolution
+**RFI triggers for sprinkler contractors:**
 
-In the field, minor conflicts are resolved on the spot between foremen. This requires:
-- Understanding what can be adjusted without affecting code compliance
-- Knowing which changes require engineering review (pipe size changes, head relocations that affect coverage or calculations)
-- Documenting all field changes on as-built drawings
+- Any structural condition that differs from the coordination model
+- Ceiling height changes exceeding 2 inches from design
+- New obstructions not in the BIM model
+- Changes to hazard classification or occupancy use
+- Duct or equipment additions after coordination sign-off
 
-### As-built documentation
+---
 
-Every field change should be marked up on the working drawings. These as-builts become the basis for the final record drawings submitted to the building owner and AHJ at project closeout. Failure to document field changes creates problems during future renovations and ITM inspections.
+## Coordination meeting checklist
 
-{% callout type="note" title="Communication prevents conflicts" %}
-The most effective coordination tool is not software — it is regular, direct communication between trade foremen on the job site. A five-minute conversation at the morning coordination meeting can prevent a full day of rework.
-{% /callout %}
+Standard agenda for weekly MEP coordination:
+
+- [ ] Review unresolved clashes from previous cycle
+- [ ] Walk through new model areas (by building section or floor)
+- [ ] Identify upcoming areas for installation — confirm BIM is complete
+- [ ] Review RFIs affecting coordination
+- [ ] Confirm ceiling heights and soffit locations with architect
+- [ ] Document all resolutions with responsible party and deadline
+- [ ] Set next meeting date and areas to review

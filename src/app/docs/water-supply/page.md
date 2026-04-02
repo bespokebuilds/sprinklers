@@ -3,154 +3,141 @@ title: Water Supply Sources
 nextjs:
   metadata:
     title: Water Supply Sources
-    description: Understanding municipal and private water supplies for fire sprinkler systems — flow tests, supply curves, and adequacy analysis.
+    description: Water supply analysis for fire sprinkler systems — flow test calculations, supply curve plotting, pressure loss data, and adequacy determination.
 ---
 
-Every fire sprinkler system is only as good as the water supply feeding it. Before a single pipe is drawn, you need to know what the water supply can deliver and whether it meets the system demand. This page covers how to evaluate, document, and work with the water sources that keep sprinkler systems functional. {% .lead %}
+Flow test data, supply curve math, and device losses — everything needed to determine whether a water supply can meet sprinkler system demand. {% .lead %}
 
----
+## Flow test calculation
 
-## Municipal water supply
+A fire flow test produces three values: **static pressure** (no flow), **residual pressure** (at measured flow), and **measured flow** (gpm). From these, calculate available flow at any residual pressure using the N^1.85 relationship.
 
-The most common water source for fire sprinkler systems is the public water distribution system. Municipal supply is generally reliable, but its capacity varies by location, time of day, and seasonal demand.
+### The supply curve formula
 
-### Flow test data
+The pressure drop from static follows the power-law relationship:
 
-A fire flow test measures the available pressure and flow from the municipal system at or near the project site. The test produces three critical numbers:
+**Q_available = Q_measured x [(P_static - P_desired) / (P_static - P_residual)]^0.54**
 
-- **Static pressure** — the pressure in the system with no water flowing, measured in psi
-- **Residual pressure** — the pressure measured at the test hydrant while water is flowing from a nearby hydrant
-- **Flow** — the measured flow rate in gpm at the residual pressure, taken from the flowing hydrant(s)
+Where:
+- **Q_available** = available flow at desired residual pressure (gpm)
+- **Q_measured** = flow measured during test (gpm)
+- **P_static** = static pressure (psi)
+- **P_desired** = desired residual pressure (psi)
+- **P_residual** = residual pressure measured during test (psi)
+- **0.54** = exponent derived from 1/1.85
 
-Flow tests are conducted per NFPA 291 and typically involve two hydrants: one for pressure measurement and one (or more) for flow. The results are only valid for the conditions at the time of the test — time of year, time of day, and local demand all affect the numbers.
-
-{% callout type="warning" title="Flow test age matters" %}
-Most AHJs and insurance carriers require flow test data less than 12 months old. Some require tests during peak demand periods. Always confirm the AHJ's requirements before relying on existing test data.
+{% callout %}
+The exponent 0.54 comes from the Hazen-Williams relationship. Some references use 0.5 as a conservative simplification — this underestimates available flow slightly.
 {% /callout %}
 
-### Reading a flow test report
+### Worked example
 
-A flow test report should include the date, time, location of the test hydrant and flow hydrant(s), static pressure, residual pressure, and pitot readings. From these values, you calculate the available flow at any given residual pressure using the relationship between pressure and flow.
+**Given:** Static = 85 psi, Residual = 72 psi at 1,100 gpm. Find available flow at 20 psi residual.
 
-{% figure src="/placeholder-diagram.svg" alt="Sample flow test report" caption="Typical fire flow test report showing static pressure, residual pressure, and flow data" /%}
+**Step 1** — Identify known values:
+- P_static = 85 psi
+- P_residual = 72 psi
+- Q_measured = 1,100 gpm
+- P_desired = 20 psi
 
----
+**Step 2** — Calculate pressure drop ratio:
+**(85 - 20) / (85 - 72) = 65 / 13 = 5.0**
 
-## Supply and demand curves
+**Step 3** — Apply the exponent:
+**5.0^0.54 = 2.38**
 
-The water supply curve is a graphical representation of what the municipal system can deliver. It plots pressure (psi) on the vertical axis against flow (gpm) on the horizontal axis, following the N^1.85 curve shape.
+**Step 4** — Calculate available flow:
+**Q_available = 1,100 x 2.38 = 2,618 gpm**
+
+**Result:** Approximately **2,618 gpm** is available at 20 psi residual.
+
+{% callout type="warning" %}
+Always plot the full supply curve — do not rely on a single calculated point. The curve is nonlinear and real-world conditions may differ from the mathematical model at extreme flows.
+{% /callout %}
 
 ### Plotting the supply curve
 
-You need two points to plot the supply curve:
+To plot, calculate Q_available at multiple desired residual pressures (e.g., 20, 30, 40, 50, 60, 70 psi) and plot flow (x-axis) vs. pressure (y-axis) on N^1.85 paper or equivalent software.
 
-1. **Static point** — static pressure at zero flow
-2. **Residual point** — residual pressure at the measured flow
+| Desired Residual (psi) | Pressure Drop Ratio | Ratio^0.54 | Available Flow (gpm) |
+|---|---|---|---|
+| 70 | 1.15 | 1.08 | 1,188 |
+| 60 | 1.92 | 1.45 | 1,595 |
+| 50 | 2.69 | 1.75 | 1,925 |
+| 40 | 3.46 | 2.01 | 2,211 |
+| 30 | 4.23 | 2.21 | 2,431 |
+| 20 | 5.00 | 2.38 | 2,618 |
 
-These two points define a curve (not a straight line) that represents the supply at all flow rates. The curve follows the Hazen-Williams relationship and is plotted on N^1.85 graph paper or calculated mathematically.
+{% figure src="/placeholder-diagram.svg" alt="Water supply curve plotted on N^1.85 graph paper showing static pressure, test point, and calculated curve" caption="Supply curve plotted from flow test data. The system demand point must fall below and to the left of this curve." /%}
 
-### Comparing supply to demand
+## Elevation correction
 
-The system demand is plotted on the same graph. The demand point represents the total flow and pressure required at the base of the riser (BOR), including:
+Water pressure changes at **0.433 psi per foot** of elevation difference. Pressure decreases when the sprinkler system is above the test point and increases when below.
 
-- Sprinkler demand (from hydraulic calculations)
-- Hose stream allowance (per NFPA 13 based on hazard)
-- Any friction loss from the water supply to the BOR
+| Elevation Change (ft) | Pressure Adjustment (psi) | Direction |
+|---|---|---|
+| 5 | 2.17 | Subtract if above source |
+| 10 | 4.33 | Subtract if above source |
+| 15 | 6.50 | Subtract if above source |
+| 20 | 8.66 | Subtract if above source |
+| 30 | 12.99 | Subtract if above source |
+| 40 | 17.32 | Subtract if above source |
+| 50 | 21.65 | Subtract if above source |
 
-If the demand point falls below and to the left of the supply curve, the water supply is adequate. The vertical distance between the supply curve and the demand point at the required flow represents the safety margin.
-
-{% figure src="/placeholder-diagram.svg" alt="Supply vs demand curve comparison" caption="Water supply curve plotted against system demand — the supply curve must be above and to the right of the demand point" /%}
-
-{% callout type="note" title="Safety margin" %}
-While NFPA 13 does not mandate a specific safety margin, most engineers target at least 10 psi between the supply curve and the demand point. Some AHJs and insurance carriers have their own minimum margin requirements.
+{% callout %}
+Measure elevation from the flow test gauge location to the highest sprinkler in the system, not to the roof or ground floor. Per NFPA 13, adjust both the static and residual pressures at the source.
 {% /callout %}
 
----
+## Device pressure losses
 
-## Private water supplies
+Account for every device between the water source and the sprinkler system when determining available pressure.
 
-When municipal supply is unavailable or insufficient, private water sources supplement or replace the public system.
+| Device | Typical Pressure Loss (psi) | Notes |
+|---|---|---|
+| DCDA backflow preventer | 8-12 | Double check detector assembly |
+| RPDA backflow preventer | 12-15 | Reduced pressure detector assembly |
+| DCVA backflow preventer | 5-8 | Double check valve assembly |
+| Alarm check valve | 5-10 | Wet system riser |
+| Dry pipe valve | 5-15 | Varies significantly by model |
+| Deluge valve | 5-10 | Open when activated |
+| Butterfly valve (open) | 1-3 | Fully open position |
+| OS&Y gate valve (open) | 0.5-1 | Fully open, minimal loss |
+| Compound meter | Varies | Use manufacturer loss curves for flow rate |
+| Turbine meter | Varies | Use manufacturer loss curves for flow rate |
 
-### Wells
-
-Dedicated fire wells can serve as a primary or secondary supply. They require a fire pump (typically vertical turbine) and must demonstrate sustained flow capacity through extended pump tests. Well recovery rate is critical — the well must deliver the required flow for the full system duration without running dry.
-
-### Reservoirs and ponds
-
-Natural or constructed reservoirs can serve as gravity or suction sources. Key considerations include minimum water level (accounting for drought, siltation, and ice), intake depth and screening, and whether a pump is needed to achieve required pressure.
-
-### Elevated tanks
-
-Elevated storage tanks provide pressure through gravity head. Every foot of elevation above the sprinkler system provides approximately 0.433 psi. These are common in rural or campus settings where consistent pressure is needed without a pump.
-
-### Pressure tanks
-
-Pressure tanks use compressed air above a stored water volume to deliver flow. They are limited in capacity and typically only suitable for small systems or supplemental supply. NFPA 22 governs their construction and sizing.
-
----
-
-## Fire department connections
-
-The fire department connection (FDC) is a critical component of every sprinkler system. It allows the fire department to supplement the water supply by pumping into the system from their apparatus.
-
-### Purpose and function
-
-The FDC connects to the sprinkler system downstream of the alarm valve check valve. When the fire department connects hose lines and pumps water in, it boosts both pressure and flow in the system. The FDC does not replace the primary water supply — it supplements it.
-
-### Design requirements
-
-Per NFPA 13:
-
-- FDCs must be located on the street side of the building, visible and accessible to responding apparatus
-- The connection type and size must match local fire department equipment (typically 2-1/2" siamese or 4" storz)
-- A check valve prevents backflow from the system to the FDC
-- An automatic drain valve prevents freezing in the FDC piping
-- Signage must identify the system served (e.g., "AUTO SPKR" or "STANDPIPE")
-
-{% figure src="/placeholder-diagram.svg" alt="Fire department connection detail" caption="Typical FDC installation showing check valve, drain, and signage requirements" /%}
-
----
-
-## Combined and shared systems
-
-In some buildings, the fire sprinkler system shares a water supply with domestic or process water systems. These arrangements require careful attention to backflow prevention and supply adequacy.
-
-### Backflow prevention
-
-Any connection between a fire sprinkler system and a potable water supply requires a backflow preventer. The type required depends on local health department regulations:
-
-- **Double check detector assembly (DCDA)** — most common for fire sprinkler connections, includes a metered bypass to detect unauthorized use
-- **Reduced pressure detector assembly (RPDA)** — required in some jurisdictions, provides higher level of backflow protection with a relief valve
-
-### Supply adequacy
-
-When domestic and fire systems share a supply, the hydraulic analysis must account for the simultaneous domestic demand. The water supply must satisfy both fire sprinkler demand and peak domestic demand occurring at the same time.
-
-{% callout type="warning" title="Backflow preventer pressure loss" %}
-Backflow preventers introduce significant friction loss — often 8-12 psi for a DCDA and 12-15 psi or more for an RPDA. This loss must be included in the hydraulic calculations. Confirm the specific device's loss characteristics from the manufacturer's data.
+{% callout type="warning" %}
+Always use the manufacturer's published loss data for the specific device model and flow rate. The values above are planning-level estimates only. Backflow preventer losses increase significantly with age and fouling — test annually per NFPA 25.
 {% /callout %}
 
----
+## Safety margin guidelines
 
-## Evaluating supply adequacy
+The system demand curve must fall below and to the left of the adjusted supply curve with adequate margin.
 
-The final determination of water supply adequacy compares the total system demand at the base of the riser to the available supply, accounting for all losses between the water source and the system.
+| Authority / Standard | Minimum Safety Margin | Notes |
+|---|---|---|
+| Typical industry practice | 10 psi | Between supply curve and demand point |
+| FM Global (Data Sheet 3-0) | 10 psi or 10% of demand | Whichever is greater |
+| Municipal AHJ | Varies | Some require 20% margin |
+| Insurance carrier | Varies | May exceed code minimums |
 
-### Losses to account for
+Key considerations:
+- Flow test data reflects conditions at the time of the test — municipal pressures fluctuate seasonally and with time of day
+- NFPA 291 recommends testing during peak demand periods for the water utility
+- Supply degradation over time (tuberculation, new development) can reduce available flow
+- Consider future building additions that may increase system demand
 
-- Friction loss in underground piping from the water main to the building
-- Elevation changes between the water main and the highest sprinkler
-- Losses through backflow preventers, meters, and other devices
-- Losses through the fire pump (if applicable — the pump adds pressure, not subtracts)
+{% callout %}
+Per NFPA 13, Section 27.2 — flow test data more than 12 months old should be verified with the water utility or retested before final design submission.
+{% /callout %}
 
-### When the supply is insufficient
+## Water supply adequacy determination
 
-If the available supply does not meet the system demand with adequate margin, options include:
+After plotting the supply curve and the system demand point, confirm:
 
-- Adding a fire pump to boost pressure
-- Installing a water storage tank to supplement flow
-- Requesting the water utility upgrade the main (long lead time)
-- Redesigning the sprinkler system to reduce demand (different head type, looped mains, larger pipe)
-- Negotiating with the AHJ for alternative approaches
+1. **Demand point is below the supply curve** at the required flow rate
+2. **Safety margin** meets the AHJ and insurance requirements
+3. **Elevation corrections** are applied from the test point to the highest sprinkler
+4. **All device losses** are subtracted from the supply side
+5. **Hose stream demand** is added per NFPA 13 Table 11.2.3.1.2
 
-The most cost-effective solution depends on whether the deficiency is primarily pressure, flow, or both.
+If the supply is inadequate, options include: fire pump (see [Fire Pumps](/docs/pumps)), dedicated water storage tank (see [Water Storage Tanks](/docs/water-tanks)), or connecting to a second water main.

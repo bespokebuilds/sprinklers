@@ -3,205 +3,191 @@ title: Occupancy and Hazard Classification
 nextjs:
   metadata:
     title: Occupancy and Hazard Classification
-    description: NFPA 13 occupancy hazard classifications — Light Hazard, Ordinary Hazard, Extra Hazard, and commodity classifications for storage occupancies.
+    description: "NFPA 13 hazard classification quick reference — design criteria by hazard, occupancy examples, commodity classification, and storage parameters."
 ---
 
-Hazard classification is the single most consequential decision in sprinkler system design. It determines the design density, design area, hose stream allowance, duration, and often the type of sprinkler head required. Getting this wrong means the entire system is wrong. {% .lead %}
+Consolidated design criteria, occupancy examples, commodity classifications, and storage parameters from NFPA 13. All section references are to the 2022 edition unless noted. {% .lead %}
 
 ---
 
-## Overview
+## Design criteria by hazard classification
 
-NFPA 13 Chapter 4 defines occupancy hazard classifications based on the expected severity of a fire in the space. The classification depends on the quantity and combustibility of the building contents, not the building construction type.
+This is the primary lookup table. For pre-2022 editions, the density/area curves allowed trading density for area; the 2022 single-point values below eliminate that trade-off.
 
-The three primary classifications are:
+| Hazard | Density (gpm/sq ft) | Design Area (sq ft) | Hose Stream (gpm) | Duration (min) |
+| --- | --- | --- | --- | --- |
+| Light Hazard | 0.10 | 1,500 | 100 | 30 |
+| Ordinary Hazard Group 1 | 0.15 | 1,500 | 250 | 60 |
+| Ordinary Hazard Group 2 | 0.20 | 1,500 | 250 | 60 |
+| Extra Hazard Group 1 | 0.30 | 2,500 | 500 | 90 |
+| Extra Hazard Group 2 | 0.40 | 2,500 | 500 | 90-120 |
 
-1. **Light Hazard** — low quantity of combustibles, low heat release
-2. **Ordinary Hazard** — moderate quantity of combustibles (Group 1 and Group 2)
-3. **Extra Hazard** — high quantity of combustibles or flammable/combustible liquids (Group 1 and Group 2)
-
-Storage occupancies have their own separate classification system based on commodity class and storage arrangement.
-
-{% callout type="warning" title="Classification drives everything" %}
-A misclassified space cascades through every aspect of the design — density, area, pipe sizing, water supply, and head selection. When in doubt, classify conservatively or consult the AHJ early.
+{% callout type="note" %}
+These single-point values are from the 2022 edition (Section 19.3). Pre-2022 editions use density/area curves (Figure 19.3.3.1.1 in prior editions) which permit smaller design areas at higher densities. Know which edition your jurisdiction enforces.
 {% /callout %}
 
 ---
 
-## Light Hazard
+## Occupancy examples by classification
 
-Light Hazard occupancies contain low quantities of combustible materials with low rates of heat release. Typical examples:
+Per NFPA 13 Section 4.3. These are representative, not exhaustive. When a specific occupancy is not listed, classify based on the quantity and combustibility of contents.
 
-- Offices and conference rooms
-- Churches and places of worship
-- Educational classroom areas
-- Hospitals and nursing homes (patient areas)
-- Hotels and dormitories (guest rooms)
-- Libraries (reading areas, not stack rooms)
-- Museums (display areas)
-- Residential common areas
+### Light Hazard (Section 4.3.2)
 
-### Design criteria
+| Occupancy Type | Examples |
+| --- | --- |
+| Assembly | Churches, auditoriums, theaters (non-stage areas) |
+| Educational | Classrooms, libraries (reading areas) |
+| Institutional | Hospitals, nursing homes, patient rooms |
+| Office | General office areas, data processing |
+| Residential | Hotels, apartments, dormitories |
+| Miscellaneous | Museum galleries, restaurant seating areas, courtrooms |
 
-- **Density**: 0.10 gpm/sq ft
-- **Design area**: 1,500 sq ft
-- **Hose stream allowance**: 100 gpm
-- **Duration**: 30 minutes
+### Ordinary Hazard Group 1 (Section 4.3.3.1)
 
-Light Hazard systems are the simplest to design and require the smallest water supply. Many Light Hazard systems can be designed using the pipe schedule method (NFPA 13 Chapter 27) rather than hydraulic calculations.
+| Occupancy Type | Examples |
+| --- | --- |
+| Automotive | Parking garages, car showrooms |
+| Manufacturing (light) | Electronics assembly, bakeries, beverage manufacturing |
+| Commercial | Restaurants (kitchen areas), laundries, dry cleaners |
+| Institutional | Library stack areas (up to 8 ft high) |
+| Miscellaneous | Machine shops, canneries, glass manufacturing |
 
----
+### Ordinary Hazard Group 2 (Section 4.3.3.2)
 
-## Ordinary Hazard Group 1
+| Occupancy Type | Examples |
+| --- | --- |
+| Manufacturing | Metal working, paper/pulp processing, leather goods |
+| Repair/Service | Automotive repair, tire storage (limited), post offices |
+| Mercantile | Department stores, supermarkets, large retail |
+| Industrial | Cereal mills, feed mills, textile manufacturing |
+| Storage | Wood product storage (limited quantity), warehouses (non-high-piled) |
+| Miscellaneous | Piers, wharves, stages/studios |
 
-Ordinary Hazard Group 1 (OH1) occupancies contain moderate combustible contents that are expected to produce fires of moderate heat release.
+### Extra Hazard Group 1 (Section 4.3.4.1)
 
-Typical examples:
-- Automobile parking garages
-- Bakeries
-- Beverage manufacturing
-- Electronic plants
-- Glass and glass products manufacturing
-- Laundries
-- Restaurant cooking areas
+| Occupancy Type | Examples |
+| --- | --- |
+| Manufacturing | Die casting, plywood/particleboard manufacturing |
+| Processing | Rubber reclaiming, saw mills, upholstering with plastics |
+| Printing | Printing plants with high ink volumes |
+| Miscellaneous | Aircraft hangars (without fuel), metal extruding |
 
-### Design criteria
+### Extra Hazard Group 2 (Section 4.3.4.2)
 
-- **Density**: 0.15 gpm/sq ft (typical — may select from density/area curves)
-- **Design area**: 1,500 sq ft
-- **Hose stream allowance**: 250 gpm
-- **Duration**: 60 minutes
+| Occupancy Type | Examples |
+| --- | --- |
+| Processing | Flammable liquid spraying, flow coating, open oil quenching |
+| Manufacturing | Solvent cleaning, varnish/paint dipping, manufactured housing |
+| Chemical | Plastics processing, solvent extracting |
+| Miscellaneous | Asphalt saturating, upholstering with large quantities of plastic foam |
 
----
-
-## Ordinary Hazard Group 2
-
-Ordinary Hazard Group 2 (OH2) occupancies have contents with a higher combustible load or heat release than OH1.
-
-Typical examples:
-- Cereal mills
-- Chemical plants (ordinary)
-- Dry cleaning
-- Horse stables
-- Machine shops
-- Metalworking
-- Mercantile (retail stores)
-- Post offices
-- Stages and studios
-- Tire manufacturing
-- Warehouses (with moderate storage)
-- Wood product assembly
-
-### Design criteria
-
-- **Density**: 0.20 gpm/sq ft (typical)
-- **Design area**: 1,500 sq ft
-- **Hose stream allowance**: 250 gpm
-- **Duration**: 60 minutes
-
-{% figure src="/placeholder-diagram.svg" alt="Hazard classification examples" caption="Visual comparison of occupancy types across Light Hazard, OH1, OH2, and Extra Hazard classifications" /%}
-
----
-
-## Extra Hazard Group 1
-
-Extra Hazard Group 1 (EH1) occupancies have contents with a high rate of heat release but little or no flammable or combustible liquids.
-
-Typical examples:
-- Aircraft hangars (maintenance areas)
-- Die casting
-- Metal extruding
-- Plywood and particle board manufacturing
-- Printing (using inks with flash points above 100°F)
-- Rubber reclaiming, compounding, or vulcanizing
-- Sawmills
-- Upholstering with plastic foam
-
-### Design criteria
-
-- **Density**: 0.30 gpm/sq ft (typical)
-- **Design area**: 2,500 sq ft
-- **Hose stream allowance**: 500 gpm
-- **Duration**: 90 minutes
-
----
-
-## Extra Hazard Group 2
-
-Extra Hazard Group 2 (EH2) occupancies involve moderate to substantial amounts of flammable or combustible liquids, or occupancies where combustibles create rapidly developing fires with high heat release.
-
-Typical examples:
-- Asphalt saturating
-- Flammable liquid spraying
-- Flow coating
-- Manufactured home or modular building assembly (plastics)
-- Oil quenching
-- Plastics processing
-- Solvent cleaning
-- Varnish and paint dipping
-
-### Design criteria
-
-- **Density**: 0.40 gpm/sq ft (typical)
-- **Design area**: 2,500 sq ft
-- **Hose stream allowance**: 500 gpm
-- **Duration**: 90-120 minutes
-
-{% callout type="note" title="Density/area curves" %}
-For Ordinary Hazard and Extra Hazard classifications, the designer may select any density/area combination from the NFPA 13 density/area curves. The curve allows a trade-off: a higher density over a smaller area, or a lower density over a larger area. The most common practice is to select the point on the curve that minimizes the total water supply requirement.
+{% callout type="warning" %}
+A building often contains multiple hazard classifications. NFPA 13 allows subdividing the building and designing each area to its own classification, provided adequate separation or transition is maintained. The highest hazard classification does NOT need to be applied to the entire building.
 {% /callout %}
 
 ---
 
-## Storage occupancies
+## Commodity classification
 
-Storage occupancies have their own classification system separate from the general hazard groups. The fire challenge in storage is primarily driven by two factors: what is being stored (commodity classification) and how it is arranged (storage method and height).
+Per NFPA 13 Chapter 5 (2022 edition; previously in Chapter 5/6 of earlier editions). Commodity class drives storage sprinkler design criteria.
 
-### Commodity classification
+### Non-plastics: Class I through IV
 
-NFPA 13 classifies stored goods into commodity classes based on the expected fire behavior:
+| Class | Description | Examples |
+| --- | --- | --- |
+| Class I | Non-combustible products on wood pallets or in single-layer corrugated cartons | Metal parts, empty cans, glass bottles, food in non-combustible containers |
+| Class II | Class I products in slatted wooden crates, multi-layer corrugated cartons, or equivalent combustible packaging | Canned goods in cartons, glass products in multi-wall boxes |
+| Class III | Wood, paper, natural fiber products, Group C plastics (<5% by weight) | Lumber, furniture (wood, no foam), clothing, shoes, food in plastic containers <5% |
+| Class IV | Class I/II/III products with appreciable Group A plastic packaging, or Group B plastics (5-15% by weight) | Small appliances in molded foam packaging, products in blister packs |
 
-- **Class I** — non-combustible products on wood pallets, in single-wall corrugated cartons
-- **Class II** — Class I products in slatted wood crates, multi-wall corrugated cartons, or with some combustible packaging
-- **Class III** — wood, paper, natural fiber products, or Group C plastics
-- **Class IV** — Class I-III products containing Group A plastics in packaging or product, or free-flowing Group B plastics
+### Plastics: Group A, B, C
 
-### Plastic groups
+| Group | Description | Specific Materials |
+| --- | --- | --- |
+| Group A | High heat release, fast flame spread | ABS, acrylic (PMMA), polycarbonate, polypropylene, polystyrene (expanded/extruded), polyurethane foam, PET, FRP, SAN |
+| Group B | Moderate heat release | Fluoroplastics (PTFE), nylon, silicone rubber, wire/cable with PE/PP insulation |
+| Group C | Low heat release, comparable to Class III commodity | CPVC, phenolics, PVC (rigid), PVDC, urea melamine |
 
-Plastics are classified by their heat release and burning characteristics:
+{% callout type="note" %}
+Group A expanded plastics (EPS, polyurethane foam) are the most challenging commodity. Cartoned expanded Group A plastics at rack storage heights above 25 ft typically require in-rack sprinklers in addition to ceiling-level protection, even with ESFR heads.
+{% /callout %}
 
-- **Group A** — most severe, including ABS, polystyrene (expanded or unexpanded), polyurethane foam, FRP
-- **Group B** — moderate, including fluoroplastics, nylon, silicone
-- **Group C** — least severe, including melamine, phenolic, PTFE
+### Commodity classification decision flow
 
-### Storage methods
-
-- **Palletized** — goods on pallets stacked on the floor
-- **Solid pile** — goods stacked directly without pallets
-- **Shelf storage** — open shelving (metal or wood)
-- **Rack storage** — steel racks (single-row, double-row, multi-row), with or without in-rack sprinklers
-- **Rubber tire storage** — separate criteria in NFPA 13
-
-{% figure src="/placeholder-diagram.svg" alt="Commodity classification decision tree" caption="Decision tree for determining commodity classification — from product contents through packaging to final class" /%}
+1. Identify the product itself -- what is the base commodity material?
+2. Identify the packaging -- single-wall corrugated, multi-wall, foam inserts, blister packs?
+3. Identify the pallet -- wood, plastic, or none?
+4. The **controlling commodity** is the highest classification of the product, packaging, or pallet material
+5. Plastic pallets automatically elevate Class I-III commodities to at minimum Class IV (uncartoned Group A plastic if the pallet material is Group A)
 
 ---
 
-## Mixed occupancies
+## Storage configuration parameters
 
-Many buildings contain spaces with different hazard classifications. NFPA 13 provides two approaches:
+Storage sprinkler design depends on the interaction of commodity class, storage height, storage arrangement, and ceiling height.
 
-### Separate systems
+### Storage arrangement types
 
-Design each hazard area as a separate system (or separate calculation area) with its own design criteria. A hydraulic demand is calculated for each area, and the most demanding governs the water supply.
+| Arrangement | Description | Key Design Impact |
+| --- | --- | --- |
+| Solid pile | Stacked directly on floor, no racks | Flue spaces rely on irregular stacking; worst case for fire development |
+| Palletized | Stacked on pallets, no racks | Limited flue spaces; design as solid pile unless flue spaces maintained |
+| Single-row rack | One pallet deep | Longitudinal flue spaces present; transverse flues at each tier |
+| Double-row rack | Two pallets deep, back-to-back | Reduced longitudinal flues; most common warehouse rack |
+| Multi-row rack | Three or more pallets deep | Requires in-rack sprinklers in most cases |
+| Open-top containers | Bins, shelf storage, totes | Shelf dividers limit sprinkler penetration |
 
-### Shared system with highest hazard
+### Key thresholds affecting design
 
-Apply the highest hazard classification to the entire system. This is simpler but results in a larger water supply requirement.
+| Parameter | Threshold | Impact |
+| --- | --- | --- |
+| Storage height exceeds 12 ft | Triggers Chapter 20-25 storage rules | Must use storage-specific sprinkler criteria instead of density/area |
+| Aisle width less than 8 ft | Narrow aisle | May require ESFR or specific listed protection scheme |
+| Ceiling height exceeds 35 ft | Limits K14.0 ESFR | Must use K16.8 or larger ESFR, or in-rack sprinklers |
+| Ceiling height exceeds 40 ft | Limits most ESFR | K25.2 ESFR at minimum, or control-mode specific application (CMSA) |
+| Clearance to sprinkler deflector <36 in | Below minimum | NFPA 13 Section 10.2.5 -- increase clearance or reduce storage height |
+| Clearance to sprinkler deflector >36 in for ESFR | May violate listing | Most ESFR listings require max 36 in clearance to top of storage |
 
-### Separation requirements
+---
 
-Where different hazard levels share a system, the transition between areas must be clearly defined on the plans. The designer must ensure that the piping serving the higher-hazard area is sized for the higher density, and that the remote area analysis considers the most demanding location regardless of which zone it falls in.
+## ESFR vs. control-mode density/area for storage
 
-{% callout type="warning" title="The highest hazard always wins" %}
-If any part of the sprinkler system's remote area overlaps a higher-hazard zone, the entire remote area calculation must use the higher hazard criteria. You cannot blend densities within a single remote area.
-{% /callout %}
+| Factor | ESFR | Control-Mode Density/Area |
+| --- | --- | --- |
+| Design approach | 12 sprinklers at minimum pressure | Density over calculated area |
+| In-rack sprinklers | Not required (key advantage) | Often required above 25 ft storage |
+| Hose stream | 250 gpm | 500 gpm |
+| Duration | 60 min | 90-120 min |
+| Ceiling height limit | 40-48 ft depending on K-factor | Varies; generally more flexible with in-rack |
+| Water supply required | High pressure, moderate volume | Moderate pressure, high volume |
+| Obstructions | Very sensitive to obstructions | Less sensitive |
+| Draft curtains | Cannot be used | May be required |
+
+---
+
+## Edition history notes
+
+| Edition | Key Changes to Classification/Design |
+| --- | --- |
+| 2016 | Consolidated commodity classification tables; added specific guidance for exposed Group A plastic pallets |
+| 2019 | Major chapter reorganization -- storage moved to dedicated chapters 20-25; occupancy classification remained in Chapter 4 |
+| 2022 | Density/area curves replaced with single-point density values for new designs; curves retained for existing systems; storage chapters further refined |
+
+---
+
+## Quick reference: NFPA 13 section numbers (2022 edition)
+
+| Topic | Section |
+| --- | --- |
+| Occupancy hazard classification | 4.3 |
+| Light Hazard | 4.3.2 |
+| Ordinary Hazard | 4.3.3 |
+| Extra Hazard | 4.3.4 |
+| Commodity classification | Chapter 5 |
+| Design criteria (density/area) | Chapter 19 |
+| Single-point criteria | 19.3 |
+| Palletized/solid pile storage | Chapter 20 |
+| Rack storage | Chapters 21-23 |
+| Shelf storage | Chapter 24 |
+| Hose stream and duration | 19.2.3 |

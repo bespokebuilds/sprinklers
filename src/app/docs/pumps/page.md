@@ -3,154 +3,142 @@ title: Fire Pumps
 nextjs:
   metadata:
     title: Fire Pumps
-    description: Fire pump types, sizing, drivers, performance curves, and NFPA 20 requirements for fire sprinkler systems.
+    description: Fire pump selection, sizing, performance curves, NPSH requirements, and NFPA 20 testing criteria.
 ---
 
-When the available water supply cannot deliver sufficient pressure to meet the sprinkler system demand, a fire pump bridges the gap. Fire pumps are governed by NFPA 20 (Standard for the Installation of Stationary Pumps for Fire Protection) and represent a significant engineering, installation, and maintenance commitment. {% .lead %}
+Pump sizing from system demand, NFPA 20 performance curve requirements, NPSH calculations, and testing criteria for acceptance and periodic inspections. {% .lead %}
 
----
+## Pump sizing methodology
 
-## When a fire pump is needed
+A fire pump must deliver the **total system demand** (sprinkler demand + hose streams) at the **required pressure** that the water supply alone cannot provide.
 
-A fire pump is required whenever the water supply pressure at the base of the riser is insufficient to meet the system demand. Common scenarios include:
+### Sizing steps
 
-- **High-rise buildings** where elevation head consumes most of the available street pressure
-- **Large industrial facilities** with high-density Extra Hazard systems
-- **Remote sites** with low-pressure municipal supply
-- **Private water supplies** from suction tanks, reservoirs, or wells that have adequate flow but insufficient pressure
+1. Determine total system flow demand (gpm) from hydraulic calculations per NFPA 13
+2. Add hose stream allowance per NFPA 13 Table 11.2.3.1.2
+3. Plot the demand point (total gpm at required psi) on the supply curve
+4. If the demand point exceeds the supply curve, calculate the pressure deficit
+5. Select a listed fire pump with rated capacity >= system flow at a rated pressure >= the deficit
 
-The need for a pump is determined during the hydraulic analysis: if the demand point exceeds the supply curve, you need a pump, a tank, or both.
-
----
-
-## Pump types
-
-### Horizontal split-case
-
-The most common fire pump configuration. The pump housing splits horizontally, allowing access to the impeller without disturbing the piping. Available in a wide range of capacities (250-5,000 gpm) and suitable for most applications.
-
-### Vertical in-line
-
-A compact design where the pump is mounted vertically within the piping. Used where floor space is limited. Typically available in smaller capacities (up to about 1,500 gpm).
-
-### Vertical turbine
-
-Used when the water source is below the pump (suction lift applications) such as wells, underground tanks, or reservoirs. Multiple impeller stages (bowls) are submerged in the water source, and a vertical shaft connects to the motor above.
-
-### End suction
-
-A simpler, less expensive pump suitable for smaller systems. Limited to about 1,500 gpm and generally used in lower-demand applications.
-
-{% figure src="/placeholder-diagram.svg" alt="Fire pump types comparison" caption="Common fire pump configurations — horizontal split-case, vertical in-line, vertical turbine, and end suction" /%}
-
----
-
-## Pump drivers
-
-### Electric motor
-
-The most common driver for fire pumps. Requires a dedicated, reliable power supply per NFPA 20:
-
-- Power must come from a utility connection ahead of the main building disconnect (or from an approved emergency generator)
-- The controller must be listed for fire pump service
-- Wiring must be protected from fire exposure per NFPA 20 Chapter 9
-
-Electric motors are lower maintenance, quieter, and start faster than diesel engines, but they are dependent on utility power availability.
-
-### Diesel engine
-
-Required (or preferred) when reliable electric power is not available or when a redundant driver is needed. Key considerations:
-
-- Fuel storage: minimum 8 hours of run time at full load
-- Battery charging: automatic, with weekly test run
-- Exhaust routing: per building code
-- Ventilation: combustion air and heat dissipation
-- Engine cooling: heat exchanger or radiator
-
-{% callout type="note" title="Dual-driver arrangements" %}
-Critical facilities often install both an electric and diesel-driven pump. The electric pump is the primary driver; the diesel is the backup. The diesel starts automatically if the electric pump fails to maintain pressure.
+{% callout %}
+Per NFPA 20 Section 4.8, select pump rated capacity from standard sizes: 25, 50, 100, 150, 200, 250, 300, 400, 450, 500, 750, 1000, 1250, 1500, 2000, 2500, or 3000 gpm. Do not interpolate between sizes — always round up.
 {% /callout %}
 
----
+### Sizing example
 
-## Reading a pump performance curve
+**Given:** System demand = 700 gpm at 95 psi. Water supply provides 700 gpm at 55 psi (from flow test).
 
-Every fire pump has a published performance curve that shows the relationship between flow (gpm) and pressure (psi or feet of head). Understanding this curve is essential for pump selection and system design.
+- Pressure deficit = 95 - 55 = **40 psi**
+- Select pump: **750 gpm** rated capacity (next standard size above 700)
+- Rated pressure: minimum **40 psi** (select available rating that meets or exceeds)
 
-### Key points on the curve
+The pump adds pressure to the supply. The combined supply + pump curve must exceed the demand point with adequate safety margin.
 
-- **Shutoff (churn)** — the maximum pressure the pump produces at zero flow. NFPA 20 limits shutoff pressure to 140% of rated pressure.
-- **Rated point** — the flow and pressure the pump is designed to deliver (e.g., 1,000 gpm at 100 psi). This is the "nameplate" capacity.
-- **150% point** — the pump must deliver 150% of rated flow at no less than 65% of rated pressure. This ensures the pump performs adequately under high-demand conditions.
+{% figure src="/placeholder-diagram.svg" alt="Combined water supply and fire pump curve showing demand point below the combined curve" caption="The fire pump shifts the supply curve upward by the pump's added pressure at each flow rate." /%}
 
-{% figure src="/placeholder-diagram.svg" alt="Fire pump performance curve" caption="Typical fire pump curve showing shutoff, rated point, and 150% performance requirements per NFPA 20" /%}
+## Performance curve requirements (NFPA 20)
 
-### Pump selection
+Every listed fire pump must meet these three performance points:
 
-Select a pump where:
-1. The rated capacity meets or exceeds the system flow demand
-2. The rated pressure, when added to the available supply pressure, exceeds the system pressure demand with margin
-3. The 150% point still provides adequate pressure for the system
+| Operating Point | Flow (% of rated) | Minimum Pressure (% of rated) |
+|---|---|---|
+| Shutoff (churn) | 0% | Not to exceed 140% |
+| Rated point | 100% | 100% |
+| Overload | 150% | Not less than 65% |
 
----
+The pump curve must be continuously rising from 150% flow to shutoff — no dips or flat spots allowed.
 
-## Jockey pumps
-
-A jockey pump (also called a pressure maintenance pump) is a small pump that maintains system pressure and prevents the main fire pump from starting due to minor pressure drops (small leaks, temperature changes, trapped air).
-
-### Sizing
-
-- Flow: typically 1-5 gpm — just enough to compensate for minor system losses
-- Pressure: set to maintain normal system pressure above the fire pump start threshold
-- Start/stop: controlled by pressure switches, typically starting at a few psi above the main pump start pressure
-
-The jockey pump does not contribute to fire protection capacity. Its sole purpose is preventing nuisance starts of the main fire pump.
-
----
-
-## Fire pump controllers
-
-The fire pump controller is a specialized electrical panel that manages pump operation. Per NFPA 20:
-
-- Must be listed for fire pump service
-- Located as close to the pump as practical
-- Includes automatic start on pressure drop, manual start, and emergency manual start (mechanical)
-- Must **not** include automatic stop — fire pumps can only be stopped manually to prevent premature shutdown during a fire
-- Includes instrumentation: pressure gauges, running indicators, and alarm contacts for remote monitoring
-
-{% callout type="warning" title="Fire pumps do not auto-stop" %}
-A fire pump controller must be arranged so the pump can only be stopped manually. Automatic shutdown could leave a building without fire protection during an active fire. Only the fire department or building engineer should stop a running fire pump.
+{% callout type="warning" %}
+A pump that produces exactly 140% at shutoff has zero margin. Verify the manufacturer's certified curve shows the actual shutoff value. Field conditions (suction pressure, altitude) can shift the curve.
 {% /callout %}
 
----
+## Common pump and motor combinations
 
-## Pump rooms
+| Rated Flow (gpm) | Rated Pressure (psi) | Typical HP | Driver | Typical Application |
+|---|---|---|---|---|
+| 250 | 100 | 15-25 | Electric | Small commercial, residential high-rise |
+| 500 | 100 | 30-50 | Electric | Mid-size commercial |
+| 750 | 100 | 50-75 | Electric / Diesel | Large commercial, warehouses |
+| 1,000 | 100 | 75-100 | Electric / Diesel | Large warehouses, industrial |
+| 1,500 | 100 | 100-150 | Diesel | Industrial, distribution centers |
+| 2,000 | 100 | 150-200 | Diesel | Large industrial complexes |
+| 1,000 | 175 | 125-150 | Electric / Diesel | High-rise buildings |
+| 1,500 | 175 | 175-250 | Diesel | High-rise, high-piled storage |
 
-NFPA 20 has specific requirements for the room housing the fire pump:
+{% callout %}
+Diesel drivers are required where electric service reliability is a concern or where the AHJ mandates an independent power source. NFPA 20 permits both but has separate chapters for each driver type.
+{% /callout %}
 
-- **Separation**: 2-hour fire-rated enclosure (or 1-hour if sprinklered within)
-- **Access**: direct exterior access or access from a public area
-- **Heating**: maintain minimum 40°F (4.4°C) to prevent freezing
-- **Drainage**: floor drains to handle packing gland leakage and testing
-- **Ventilation**: adequate for diesel engines (combustion air and cooling)
-- **Lighting**: normal and emergency lighting
+## Net Positive Suction Head (NPSH)
 
----
+NPSH is the absolute pressure available at the pump suction above the vapor pressure of water. Insufficient NPSH causes cavitation, which destroys impellers and reduces pump output.
 
-## Testing and maintenance
+### NPSH available (NPSHA) calculation
 
-### Weekly churn test
+**NPSHA = H_atm - H_vap - H_lift - H_friction**
 
-Run the pump at shutoff (no flow) for at least 10 minutes per NFPA 25. Record suction pressure, discharge pressure, and any unusual vibration or noise. This confirms the pump starts and runs but does not verify flow capacity.
+Where:
+- **H_atm** = atmospheric pressure at elevation (33.9 ft at sea level)
+- **H_vap** = vapor pressure of water (0.6 ft at 60 degF, 1.2 ft at 80 degF)
+- **H_lift** = static lift from water surface to pump centerline (ft, positive for suction lift)
+- **H_friction** = friction loss in suction piping (ft)
 
-### Annual flow test
+### NPSH requirement
 
-A full performance test at multiple flow points (shutoff, rated, and 150%) per NFPA 25. Compare results to the original acceptance test and the pump's rated curve. Degradation of more than 5% in rated performance indicates a problem requiring investigation.
+**NPSHA must exceed NPSHR (required, from manufacturer) by a safety margin** — typically 2-5 ft minimum.
 
-### Diesel engine specific
+| Water Temperature (degF) | Vapor Pressure (ft of head) |
+|---|---|
+| 50 | 0.4 |
+| 60 | 0.6 |
+| 70 | 0.8 |
+| 80 | 1.2 |
+| 100 | 2.2 |
+| 120 | 3.9 |
 
-- Weekly: start and run for 30 minutes under load
-- Check fuel level, battery condition, oil level, coolant
-- Annual: full load test
+{% callout type="warning" %}
+Per NFPA 20, suction lift (negative suction) installations are limited to specific pump types and configurations. Maximum theoretical suction lift is approximately 15 ft at sea level, but practical limits are 10 ft or less after accounting for friction and vapor pressure.
+{% /callout %}
 
-{% figure src="/placeholder-diagram.svg" alt="Fire pump test setup" caption="Typical fire pump flow test arrangement showing suction gauge, discharge gauge, and test header with flow measurement" /%}
+## Testing criteria
+
+### Acceptance test (NFPA 20, Chapter 14)
+
+Record performance at all three curve points and verify compliance with the performance table above. The pump must also:
+- Run continuously for a minimum of **1 hour** during the flow test
+- Demonstrate proper automatic start on pressure drop
+- Verify no automatic stop (manual stop only)
+
+### Periodic testing (NFPA 25)
+
+| Test | Frequency | Duration / Requirement |
+|---|---|---|
+| No-flow (churn) test | Weekly | 10 minutes minimum |
+| Annual flow test | Annually | Record shutoff, rated, and 150% points |
+| Performance comparison | Annually | Compare to original acceptance test data |
+| Degradation threshold | — | Investigate if performance drops more than 5% from original |
+| Diesel engine test | Weekly | 30 minutes minimum run time |
+
+{% callout %}
+Per NFPA 25 Section 8.3.3 — the weekly churn test confirms the pump starts automatically and runs without alarm conditions. It does not verify flow performance. The annual flow test is the true performance verification.
+{% /callout %}
+
+## Controller requirements (NFPA 20)
+
+Fire pump controllers must be:
+
+- **Listed for fire pump service** — standard motor starters are not acceptable
+- **Automatic start** on pressure drop (adjustable set point, typically 10-15 psi below system pressure)
+- **No automatic stop** — pump runs until manually stopped by qualified personnel
+- **Emergency mechanical start** — manual override independent of electronics
+- **Locked in the ON position** — main breaker or disconnect must be supervised
+- **Separate power feed** — dedicated service ahead of the building main disconnect, or tap ahead of the main per NFPA 20 Section 9.2.2
+
+| Controller Feature | Requirement | Reference |
+|---|---|---|
+| Automatic start | Pressure switch or signal | NFPA 20 Sec. 10.4.7 |
+| Manual stop only | No automatic stop permitted | NFPA 20 Sec. 10.4.9 |
+| Sequential starting (multiple pumps) | Stagger start by 5-10 seconds | NFPA 20 Sec. 10.4.7.1 |
+| Power failure restart | Auto restart on power restoration | NFPA 20 Sec. 10.4.7 |
+| Alarm contacts | Running, power failure, phase reversal | NFPA 20 Sec. 10.4.10 |
+| Transfer switch (if applicable) | Listed for fire pump service | NFPA 20 Sec. 10.9 |
