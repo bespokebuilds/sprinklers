@@ -133,6 +133,63 @@ Where:
 
 Convert BTU/hr to kW: divide by 3,412.
 
+## Sensing lines
+
+Sensing lines (also called pressure sensing lines or signal lines) connect the water storage tank to the fire pump controller, allowing the controller to monitor system pressure and start the pump automatically when pressure drops.
+
+### Purpose
+
+When a fire pump takes suction from a storage tank (rather than a pressurized municipal main), the controller's pressure switch must sense the pressure at the pump discharge — not the tank itself. However, for systems with elevated tanks providing gravity pressure, the sensing line allows the controller to monitor the static head from the tank and detect a drop when sprinklers open.
+
+### Installation requirements
+
+| Parameter | Requirement |
+|---|---|
+| Pipe size | 1/2" minimum (3/4" preferred for longer runs) |
+| Material | Copper, brass, or stainless steel — corrosion-resistant |
+| Connection point | Tapped into the system side of the check valve, downstream of the pump discharge |
+| Routing | Slope continuously toward the connection point to prevent air pockets |
+| Valves | No shutoff valves permitted in the sensing line — must be open at all times |
+| Protection | Heat trace and insulate in cold climates to prevent freezing |
+| Length | Keep as short as practical — long runs introduce pressure lag |
+
+### Sensing line for elevated tanks
+
+For elevated tanks providing gravity pressure, the sensing line connects the tank's discharge piping to the fire pump controller pressure switch. When sprinklers open and flow begins, the pressure drop in the sensing line triggers the pump to start.
+
+| Configuration | Sensing Line Connection |
+|---|---|
+| Elevated tank (gravity, no pump) | Sensing line from tank discharge to pressure switch at alarm panel |
+| Elevated tank with booster pump | Sensing line from pump discharge side to pump controller |
+| Ground-level suction tank | Sensing line from pump discharge to pump controller |
+| Pressure tank | Sensing line from tank discharge to pressure switch |
+
+### Common sensing line problems
+
+| Issue | Cause | Resolution |
+|---|---|---|
+| Pump won't start | Air trapped in sensing line | Bleed air from high points; verify continuous slope |
+| Pump starts erratically | Sensing line partially frozen | Heat trace and insulate the full length |
+| False starts | Pressure fluctuations from domestic usage | Verify sensing line is on the fire protection side only |
+| Delayed pump start | Sensing line too long or too small | Shorten run or increase to 3/4" pipe |
+| Pump runs continuously | Sensing line leak or disconnected | Pressure test the sensing line; inspect all fittings |
+
+{% callout type="warning" %}
+A blocked or frozen sensing line will prevent the fire pump from starting automatically. In cold climates, heat tracing on sensing lines is not optional — it is as critical as heat tracing on the main piping. Include sensing lines on the ITM inspection checklist.
+{% /callout %}
+
+### NFPA 20 reference
+
+NFPA 20 Section 4.18 covers pressure sensing line requirements. Key points:
+
+- Sensing lines must not include any valve that could isolate the pressure switch
+- The connection must be on the system side (downstream of the pump check valve)
+- For jockey pump controllers, a separate sensing line is recommended to prevent interaction between the jockey and main pump pressure switches
+
+{% figure src="/placeholder-diagram.svg" alt="Sensing line routing from elevated tank through check valve to fire pump controller" caption="Sensing line routing — connects system pressure to the fire pump controller pressure switch for automatic pump start on pressure drop" /%}
+
+---
+
 ## Tank types comparison
 
 | Feature | Ground-Level Steel | Elevated Steel | Concrete | Fiberglass |
