@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import clsx from 'clsx'
 
 import { Logo, Logomark } from '@/components/Logo'
@@ -11,6 +11,14 @@ import { Navigation, findTabForPath } from '@/components/Navigation'
 import { Search } from '@/components/Search'
 import { ThemeSelector } from '@/components/ThemeSelector'
 import { navigationTabs } from '@/lib/navigation'
+
+function getTabFirstPage(tabId) {
+  let tab = navigationTabs.find((t) => t.id === tabId)
+  if (tab && tab.sections.length > 0 && tab.sections[0].links.length > 0) {
+    return tab.sections[0].links[0].href
+  }
+  return '/'
+}
 
 function Header({ activeTab, onTabChange }) {
   let [isScrolled, setIsScrolled] = useState(false)
@@ -56,8 +64,9 @@ function Header({ activeTab, onTabChange }) {
       <div className="hidden lg:block border-b border-orange-200 bg-white dark:border-red-900 dark:bg-red-950/80">
         <div className="mx-auto flex max-w-8xl gap-1 px-4 sm:px-6 lg:px-8 xl:px-12">
           {navigationTabs.map((tab) => (
-            <button
+            <Link
               key={tab.id}
+              href={getTabFirstPage(tab.id)}
               onClick={() => onTabChange(tab.id)}
               className={clsx(
                 'border-b-2 px-3 py-2.5 text-sm font-medium transition-colors',
@@ -67,7 +76,7 @@ function Header({ activeTab, onTabChange }) {
               )}
             >
               {tab.label}
-            </button>
+            </Link>
           ))}
         </div>
       </div>

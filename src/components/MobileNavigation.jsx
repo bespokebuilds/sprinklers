@@ -2,12 +2,20 @@
 
 import { Suspense, useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 import { Dialog } from '@headlessui/react'
 
 import { Logomark } from '@/components/Logo'
 import { Navigation } from '@/components/Navigation'
 import { navigationTabs } from '@/lib/navigation'
+
+function getTabFirstPage(tabId) {
+  let tab = navigationTabs.find((t) => t.id === tabId)
+  if (tab && tab.sections.length > 0 && tab.sections[0].links.length > 0) {
+    return tab.sections[0].links[0].href
+  }
+  return '/'
+}
 
 function MenuIcon(props) {
   return (
@@ -53,6 +61,7 @@ function CloseOnNavigation({ close }) {
 export function MobileNavigation({ activeTab, onTabChange }) {
   let [isOpen, setIsOpen] = useState(false)
   let close = useCallback(() => setIsOpen(false), [setIsOpen])
+  let router = useRouter()
 
   function onLinkClick(event) {
     let link = event.currentTarget
@@ -100,7 +109,12 @@ export function MobileNavigation({ activeTab, onTabChange }) {
           <div className="mt-5 px-1">
             <select
               value={activeTab}
-              onChange={(e) => onTabChange(e.target.value)}
+              onChange={(e) => {
+                let newTab = e.target.value
+                onTabChange(newTab)
+                router.push(getTabFirstPage(newTab))
+                close()
+              }}
               className="w-full rounded-lg border border-orange-200 bg-white px-3 py-2 text-sm font-medium text-orange-900 dark:border-red-800 dark:bg-red-950 dark:text-orange-100"
             >
               {navigationTabs.map((tab) => (
