@@ -4,10 +4,10 @@ import { Suspense, useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { Dialog } from '@headlessui/react'
-import clsx from 'clsx'
 
 import { Logomark } from '@/components/Logo'
 import { Navigation } from '@/components/Navigation'
+import { navigationTabs } from '@/lib/navigation'
 
 function MenuIcon(props) {
   return (
@@ -50,7 +50,7 @@ function CloseOnNavigation({ close }) {
   return null
 }
 
-export function MobileNavigation() {
+export function MobileNavigation({ activeTab, onTabChange }) {
   let [isOpen, setIsOpen] = useState(false)
   let close = useCallback(() => setIsOpen(false), [setIsOpen])
 
@@ -96,7 +96,26 @@ export function MobileNavigation() {
               <Logomark className="h-9 w-9" />
             </Link>
           </div>
-          <Navigation className="mt-5 px-1" onLinkClick={onLinkClick} />
+          {/* Tab dropdown at top of mobile menu */}
+          <div className="mt-5 px-1">
+            <select
+              value={activeTab}
+              onChange={(e) => onTabChange(e.target.value)}
+              className="w-full rounded-lg border border-orange-200 bg-white px-3 py-2 text-sm font-medium text-orange-900 dark:border-red-800 dark:bg-red-950 dark:text-orange-100"
+            >
+              {navigationTabs.map((tab) => (
+                <option key={tab.id} value={tab.id}>
+                  {tab.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <Navigation
+            className="mt-5 px-1"
+            onLinkClick={onLinkClick}
+            activeTab={activeTab}
+            onTabChange={onTabChange}
+          />
         </Dialog.Panel>
       </Dialog>
     </>

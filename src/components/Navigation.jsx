@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
@@ -15,7 +15,7 @@ function GitHubIcon(props) {
   )
 }
 
-function findTabForPath(pathname) {
+export function findTabForPath(pathname) {
   for (let tab of navigationTabs) {
     for (let section of tab.sections) {
       for (let link of section.links) {
@@ -28,46 +28,21 @@ function findTabForPath(pathname) {
   return navigationTabs[0].id
 }
 
-export function NavigationTabs({ activeTab, onTabChange, className }) {
-  return (
-    <div className={clsx('flex flex-wrap gap-1', className)}>
-      {navigationTabs.map((tab) => (
-        <button
-          key={tab.id}
-          onClick={() => onTabChange(tab.id)}
-          className={clsx(
-            'rounded-md px-2.5 py-1.5 text-xs font-medium transition-colors',
-            tab.id === activeTab
-              ? 'bg-red-500 text-white'
-              : 'text-orange-600 hover:bg-orange-50 hover:text-orange-800 dark:text-orange-400 dark:hover:bg-red-950/50 dark:hover:text-orange-300',
-          )}
-        >
-          {tab.label}
-        </button>
-      ))}
-    </div>
-  )
-}
-
-export function Navigation({ className, onLinkClick }) {
+export function Navigation({ className, onLinkClick, activeTab, onTabChange }) {
   let pathname = usePathname()
-  let [activeTab, setActiveTab] = useState(() => findTabForPath(pathname))
 
   useEffect(() => {
-    setActiveTab(findTabForPath(pathname))
-  }, [pathname])
+    if (onTabChange) {
+      onTabChange(findTabForPath(pathname))
+    }
+  }, [pathname, onTabChange])
 
-  let currentTab = navigationTabs.find((tab) => tab.id === activeTab)
+  let currentTab = navigationTabs.find((tab) => tab.id === activeTab) || navigationTabs[0]
 
   return (
     <nav className={clsx('text-base lg:text-sm', className)}>
-      <NavigationTabs
-        activeTab={activeTab}
-        onTabChange={setActiveTab}
-        className="mb-6"
-      />
       <ul role="list" className="space-y-9">
-        {currentTab?.sections.map((section) => (
+        {currentTab.sections.map((section) => (
           <li key={section.title}>
             <h2 className="font-display font-medium text-orange-900 dark:text-white">
               {section.title}
